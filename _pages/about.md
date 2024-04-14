@@ -39,7 +39,7 @@ My research interest includes neural machine translation and computer vision. I 
 
 [SDRTV-to-HDRTV via Hierarchical Dynamic Context Feature Mapping](https://arxiv.org/abs/2207.00319)
 
-Gang He, **Kepeng Xu**, Li Xu, Chang Wu, Ming Sun, Xing Wen, Yu-Wing Tai
+Gang He, **Kepeng Xu***, Li Xu, Chang Wu, Ming Sun, Xing Wen, Yu-Wing Tai
 
 
 <!-- - `AAAI 2024` [Emotion Rendering for Conversational Speech Synthesis with Heterogeneous Graph-Based Context Modeling](https://arxiv.org/abs/2312.11947), Rui Liu, Yifan Hu, **Yi Ren**, et al. [![](https://img.shields.io/github/stars/walker-hyf/ECSS?style=social&label=Code+Stars)](https://github.com/walker-hyf/ECSS) -->
