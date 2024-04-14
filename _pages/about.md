@@ -34,12 +34,12 @@ My research interest includes neural machine translation and computer vision. I 
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2022</div><img src='images/scholarv0.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2022</div><img src='images/scholarv0.png' alt="sym" width="50%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [SDRTV-to-HDRTV via Hierarchical Dynamic Context Feature Mapping](https://arxiv.org/abs/2207.00319)
 
-Gang He, **Kepeng Xu***, Li Xu, Chang Wu, Ming Sun, Xing Wen, Yu-Wing Tai
+Gang He, **Kepeng Xu***, Li Xu et al.[![](https://img.shields.io/github/stars/iii935/HDCFM?style=social&label=Code+Stars)](https://github.com/iii935/HDCFM)
 
 
 <!-- - `AAAI 2024` [Emotion Rendering for Conversational Speech Synthesis with Heterogeneous Graph-Based Context Modeling](https://arxiv.org/abs/2312.11947), Rui Liu, Yifan Hu, **Yi Ren**, et al. [![](https://img.shields.io/github/stars/walker-hyf/ECSS?style=social&label=Code+Stars)](https://github.com/walker-hyf/ECSS) -->
@@ -50,6 +50,17 @@ Gang He, **Kepeng Xu***, Li Xu, Chang Wu, Ming Sun, Xing Wen, Yu-Wing Tai
 </div>
 
 <!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
+
+- `Arxiv` [Towards Robust SDRTV-to-HDRTV via Dual Inverse Degradation Network](https://arxiv.org/html/2307.03394v2), **Kepeng Xu***, Li Xu*, Gang He† et al. 
+<!-- [![](https://img.shields.io/github/stars/iii935/DIDNet?style=social&label=Code+Stars)](https://github.com/iii935/DIDNet) -->
+
+- `CLIC 22` [Hybrid video coding scheme based on VVC and spatio-temporal attention convolution neural network](https://openaccess.thecvf.com/content/CVPR2022W/CLIC/papers/He_Hybrid_Video_Coding_Scheme_Based_on_VVC_and_Spatio-Temporal_Attention_CVPRW_2022_paper.pdf), Gang He, **Kepeng Xu*** et al.
+
+- `CVPRW 22` [DNAS: A Decoupled Global Neural Architecture Search Method](https://openaccess.thecvf.com/content/CVPR2022W/NAS/papers/Xu_DNASA_Decoupled_Global_Neural_Architecture_Search_Method_CVPRW_2022_paper.pdf), **Kepeng Xu***, Gang He. 
+
+- `Arxiv` [Sdrtv-to-hdrtv conversion via spatial-temporal feature fusion](https://arxiv.org/pdf/2211.02297), **Kepeng Xu***, Li Xu et al. 
+
+
 
 
 
@@ -72,7 +83,7 @@ Gang He, **Kepeng Xu***, Li Xu, Chang Wu, Ming Sun, Xing Wen, Yu-Wing Tai
 - *2022.05*, Talk 3D Rendering Course. 
 - *2022.06*, HDR video generation technology MEGVII internal talk.
 - *2022.06*, Video compression technology solution talk, CLIC2022 (CVPR).
-- *Test*,   \| [\[video\]](https://github.com/)
+<!-- - *Test*,   \| [\[video\]](https://github.com/) -->
 
 # 💻 Internships
 - *2022.05 - 2022.10*, [MEGVII], China.
