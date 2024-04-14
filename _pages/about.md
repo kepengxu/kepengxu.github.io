@@ -34,7 +34,7 @@ My research interest includes neural machine translation and computer vision. I 
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2022</div><img src='images/scholarv0.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2022</div><img src='images/scholarv0.png' alt="sym" width="20%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [SDRTV-to-HDRTV via Hierarchical Dynamic Context Feature Mapping](https://arxiv.org/abs/2207.00319)
