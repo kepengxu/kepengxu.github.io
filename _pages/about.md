@@ -34,7 +34,7 @@ My research interest includes neural machine translation and computer vision. I 
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2022</div><img src='images/scholarv0.png' alt="sym" width="20%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2022</div><img src='images/scholarv0.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [SDRTV-to-HDRTV via Hierarchical Dynamic Context Feature Mapping](https://arxiv.org/abs/2207.00319)
@@ -66,7 +66,7 @@ Gang He, **Kepeng Xu**, Li Xu, Chang Wu, Ming Sun, Xing Wen, Yu-Wing Tai
 
 
 # 💬 Invited Talks
-- *2023.01*, Real World HDR video generation technology Alipay internal talk.
+- *2023.01*, Real World HDR video generation technology Alipay intersnal talk.
 - *2022.10*, HDR video generation technology talk ACM MM.
 - *2022.08*, HDR video generation key technology solves MEGVII internal talk.
 - *2022.05*, Talk 3D Rendering Course. 
