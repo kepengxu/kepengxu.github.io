@@ -30,7 +30,11 @@ My research team secured the fourth place in the objective quality category at t
 
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Test
+- *2024.04*: 🎉 One paper is accepted by IJCAI 2024
+<!-- - *2023.05*: 🎉 Five papers are accepted by ACL 2023
+- *2023.01*: DiffSinger was introduced in [a very popular video](https://www.bilibili.com/video/BV1uM411t7ZJ) (2000k+ views) in Bilibili!
+- *2023.01*: I join TikTok <img src='./images/tiktok.png' style='width: 6em;'> as a speech research scientist in Singapore!
+- *2022.02*: I release a modern and responsive academic personal [homepage template](https://github.com/RayeRen/acad-homepage.github.io). Welcome to STAR and FORK! -->
 
 # 📝 Publications 
 
@@ -40,6 +44,8 @@ My research team secured the fourth place in the objective quality category at t
 [SDRTV-to-HDRTV via Hierarchical Dynamic Context Feature Mapping](https://arxiv.org/abs/2207.00319)
 
 Gang He, **Kepeng Xu***, Li Xu et al.[![](https://img.shields.io/github/stars/iii935/HDCFM?style=social&label=Code+Stars)](https://github.com/iii935/HDCFM)
+
+
 
 
 <!-- - `AAAI 2024` [Emotion Rendering for Conversational Speech Synthesis with Heterogeneous Graph-Based Context Modeling](https://arxiv.org/abs/2312.11947), Rui Liu, Yifan Hu, **Yi Ren**, et al. [![](https://img.shields.io/github/stars/walker-hyf/ECSS?style=social&label=Code+Stars)](https://github.com/walker-hyf/ECSS) -->
