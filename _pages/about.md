@@ -18,7 +18,7 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 # Profile
-I am currently pursuing a Ph.D. at Xi'an University of Electronic Science and Technology, focusing on research areas including video image enhancement, high dynamic range video generation, and video compression. 
+I am currently pursuing a Ph.D. at Xidian University, focusing on research areas including video image enhancement, high dynamic range video generation, and video compression. 
 
 ## Research and Publications
 To date, I have authored over 10 scholarly articles and actively participate as a peer reviewer for top-tier conferences such as CVPR, ICCV, ACM MM, and AAAI. My work primarily explores the intersections of image processing and data compression in digital media technologies.
