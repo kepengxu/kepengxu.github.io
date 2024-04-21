@@ -30,7 +30,8 @@ My research team secured the fourth place in the objective quality category at t
 
 
 # 🔥 News
-- *2024.04*: 🎉 One paper is accepted by IJCAI 2024
+- *2024.04*: 🎉 One paper is accepted by IJCAI 2024.
+- *2024.03*: 🎉 Invited by MM as Program Reviewer.
 
 
 <!-- - *2023.05*: 🎉 Five papers are accepted by ACL 2023
