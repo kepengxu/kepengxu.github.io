@@ -42,7 +42,7 @@ My research team secured the fourth place in the objective quality category at t
 # 📝 Publications 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IJCAI 2024</div><img src='images/ijcaiimage.png' alt="sym" width="50%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IJCAI 2024</div><img src='images/ijcaiimage.png' alt="sym" width="80%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Beyond Alignment: Blind Video Face Restoration via Parsing-Guided Temporal-Coherent Transformer](https://arxiv.org/abs/2404.13640)
