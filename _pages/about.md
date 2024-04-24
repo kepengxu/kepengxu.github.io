@@ -41,6 +41,16 @@ My research team secured the fourth place in the objective quality category at t
 
 # 📝 Publications 
 
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IJCAI 2024</div><img src='images/ijcaiimage.png' alt="sym" width="50%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Beyond Alignment: Blind Video Face Restoration via Parsing-Guided Temporal-Coherent Transformer](https://arxiv.org/abs/2404.13640)
+
+**Kepeng Xu***, Li Xu, Gang He et al.[![](https://img.shields.io/github/stars/kepengxu/PGTFormer?style=social&label=Code+Stars)](https://github.com/kepengxu/PGTFormer)
+
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2022</div><img src='images/scholarv0.png' alt="sym" width="50%"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -86,8 +96,10 @@ Gang He, **Kepeng Xu***, Li Xu et al.[![](https://img.shields.io/github/stars/ii
 
 
 # 💬 Invited Talks
-- *2024.01*, Real World HDR video generation technology Alipay intersnal talk.
+<!-- - *2024.04*, Image Transmission Institute talk (End-to-End Camera Imaging). -->
 - *2024.04*, HDR video generation and quality assessment technology Alipay intersnal talk.
+- *2024.04*, HDR video generation and quality assessment technology Alipay intersnal talk.
+- *2024.01*, Real World HDR video generation technology Alipay intersnal talk.
 - *2022.10*, HDR video generation technology talk ACM MM.
 - *2022.08*, HDR video generation key technology solves MEGVII internal talk.
 - *2022.05*, Talk 3D Rendering Course. 
