@@ -184,8 +184,8 @@ function initVideo() {
   videoInitialized = true;
   vid = document.getElementById("viz_input");
   var cv = document.getElementById(vid.id + "Merge");
-  cv.width = vid.videoWidth / 4;
-  cv.height = vid.videoHeight/2;
+  cv.width = vid.videoWidth / 2;
+  cv.height = vid.videoHeight;
   vid.play();
   vid.style.height = "0px"; // Hide video without stopping it
   playVids(vid.id);
