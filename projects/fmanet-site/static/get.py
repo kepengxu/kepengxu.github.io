@@ -11,7 +11,7 @@ def extract_first_frame(input_folder):
             ret, frame = cap.read()
             if ret:
                 # 保存第一帧为PNG格式
-                cv2.imwrite(os.path.join('image', f"{filename[:-4]}.png"), frame[:,512:,:])
+                cv2.imwrite(os.path.join('image', f"{filename[:-4]}.png"), cv2.resize(frame[:,512:,:],(64,64)))
 
             cap.release()
     print("First frames extracted and saved.")
