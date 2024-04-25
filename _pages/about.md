@@ -54,6 +54,9 @@ My research team secured the fourth place in the objective quality category at t
 
 
 
+
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2022</div><img src='images/mmimage.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
