@@ -203,7 +203,7 @@ function initVideo() {
   var scale = 0.5;  // 缩小到50%
 
   // 设置画布尺寸为视频原始尺寸的一定比例
-  cv.width = vid.videoWidth * scale / 2;
+  cv.width = vid.videoWidth * scale ;
   cv.height = vid.videoHeight * scale;
 
   // 设置视频元素的CSS样式以匹配缩放
