@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Joint Video Super-Resolution (SR) and Deblurring.">
-  <meta name="keywords" content="Super-Resolution, Deblurring, SR, VSRDB, FMA-Net">
+        content="Video Face Restoration">
+  <meta name="keywords" content="Super-Resolution, Face Restoration, Video Face">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FMA-Net: Flow-Guided Dynamic Filtering and Iterative Feature Refinement with Multi-Attention for Joint Video Super-Resolution and Deblurring</title>
+  <title>Beyond Alignment: Blind Video Face Restoration via Parsing-Guided Temporal-Coherent Transformer</title>
   <style>
     @keyframes shake {
       0% {transform: translateX(0);}
@@ -35,13 +35,13 @@
   </style>
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HR3PWVQLH2"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRQSXV0K5T"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-HR3PWVQLH2');
+    gtag('config', 'G-QRQSXV0K5T');
   </script>
 
 
@@ -130,27 +130,27 @@
           <div class="title is-2 publication-title"><h1 style="display: inline; clear:none;"><img src="./static/image/apple.png" width="40", height="40"><font color="#d91421"><b>F</b></font><font color="#008000"><b>MA</font>-Net:</b> <font color="#d91421"><b>F</b></font>low-Guided Dynamic Filtering and Iterative Feature Refinement with <font color="#008000"><b>M</b></font>ulti-<font color="#008000"><b>A</b></font>ttention for Joint Video Super-Resolution and Deblurring</h1></div>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a target="_blank" rel="noopener noreferrer" href="https://www.viclab.kaist.ac.kr/">Geunhyuk Youk</a><sup> 1</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <a target="_blank" rel="noopener noreferrer" href="https://kepengxu.github.io/">Kepeng Xu</a><sup> 1</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <span class="author-block">
-              <a target="_blank" rel="noopener noreferrer" href="https://sites.google.com/view/ozbro/">Jihyong Oh</a><sup>† 2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a target="_blank" rel="noopener noreferrer" href="https://icecherylxuli.github.io/">Li Xu</a><sup>† 2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
             <span class="author-block">
-              <a target="_blank" rel="noopener noreferrer" href="https://www.viclab.kaist.ac.kr/">Munchurl Kim</a><sup>† 1</sup>
+              <a target="_blank" rel="noopener noreferrer" href="https://dblp.org/pid/96/3183-2.html">Gang He </a><sup>† 1 et al</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"> <sup>†</sup>Co-corresponding authors</span>
+            <span class="author-block"> <sup>†</sup>Corresponding authors</span>
             <!-- <span class="author-block"><sup>†</sup>Corresponding author</span> -->
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Korea Advanced Institute of Science and Technology, South Korea</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><sup>1</sup>Xidian University</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>2</sup>Chung-Ang University, South Korea</span>
+            <span class="author-block"><sup>2</sup>Southwest University of Science and Technology</span>
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block", style="color:#346dc2">CVPR 2024 Oral</span>
+            <span class="author-block", style="color:#346dc2">IJCAI 2024</span>
           </div>
 
           <div class="column has-text-centered">
@@ -166,7 +166,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a target="_blank" rel="noopener noreferrer" href="http://arxiv.org/abs/2401.03707"
+                <a target="_blank" rel="noopener noreferrer" href="https://arxiv.org/abs/2404.13640"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -186,7 +186,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/KAIST-VICLab/FMA-Net"
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/kepengxu/PGTFormer"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -236,17 +236,15 @@ bulmaCarousel.attach('#results-carousel', {
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present a joint learning scheme of video super-resolution and deblurring, called VSRDB, to restore clean high-resolution (HR) videos from blurry low-resolution (LR) ones.
-            This joint restoration problem has drawn much less attention compared to single restoration problems.
-          </p>
-          <p>
-            We propose a novel flow-guided dynamic filtering (FGDF) and iterative feature refinement with multi-attention (FRMA), which constitutes our VSRDB framework, denoted as FMA-Net.
-            Specifically, our proposed FGDF enables precise estimation of both spatio-temporally-variant degradation and restoration kernels that are aware of motion trajectories through sophisticated motion representation learning.
-            Compared to conventional dynamic filtering, the FGDF enables the FMA-Net to effectively handle large motions into the VSRDB.
-          </p>
-          <p>
-            Additionally, the stacked FRMA blocks trained with our novel temporal anchor (TA) loss, which temporally anchors and sharpens features, refine features in a course-to-fine manner through iterative updates.
-            Extensive experiments demonstrate the superiority of the proposed FMA-Net over state-of-the-art methods in terms of both quantitative and qualitative quality.
+            Multiple complex degradations are coupled in low-quality video faces in the real world. 
+            Therefore, blind video face restoration is a highly challenging ill-posed problem, 
+            requiring not only hallucinating high-fidelity details but also enhancing temporal coherence across diverse pose variations. 
+            Restoring each frame independently in a naive manner inevitably introduces temporal incoherence and artifacts from pose changes and keypoint localization errors. 
+            To address this, we propose the first blind video face restoration approach with a novel parsing-guided temporal-coherent transformer (PGTFormer) without pre-alignment. PGTFormer leverages semantic parsing guidance to select optimal face priors for generating temporally coherent artifact-free results. 
+            Specifically, we pre-train a temporal-spatial vector quantized auto-encoder on high-quality video face datasets to extract expressive context-rich priors. Then, the temporal parse-guided codebook predictor (TPCP) restores faces in different poses based on face parsing context cues without performing face pre-alignment. 
+            This strategy reduces artifacts and mitigates jitter caused by cumulative errors from face pre-alignment. Finally, the temporal fidelity regulator (TFR) enhances fidelity through temporal feature interaction and improves video temporal consistency. 
+            Extensive experiments on face videos show that our method outperforms
+             previous face restoration baselines. The code will be released on https://github.com/kepengxu/PGTFormer .        
           </p>
 
           <p>
@@ -262,7 +260,7 @@ bulmaCarousel.attach('#results-carousel', {
       <div class="column is-full">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/G6qqJXztJDM"
+          <iframe src="https://www.youtube.com/watch?v=ZNVHMgVX8P4"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
@@ -277,11 +275,10 @@ bulmaCarousel.attach('#results-carousel', {
     <h2 class="title is-3">Network Architecture</h2>
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
-        <image src="./static/image/network.png" class="img-responsive" alt="DDNeRF_Architecture_v21"><br>
+        <image src="./static/image/ijcaiimage.png" class="img-responsive" alt="DDNeRF_Architecture_v21"><br>
         <div class="content has-text-justified">
           <p>
-            <b>Top:</b> The architecture of FMA-Net for joint video super-resolution and deblurring (VSRDB). <br>
-            <b>Bottom:</b> (a) Structure of <i>i</i>+1-<i>th</i> FRMA block; (b) Concept of our flow-guided dynamic filtering.
+            <b>Top:</b> The architecture of PGTformer. <br>
           </p>
         </div>
       </div>
@@ -294,12 +291,10 @@ bulmaCarousel.attach('#results-carousel', {
     <h2 class="title is-3">Quantitative Results</h2>
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
-        <image src="./static/image/quantitative_result.png" class="img-responsive" alt="DDNeRF_Architecture_v21"><br>
+        <image src="./static/image/tableimage.png" class="img-responsive" alt="DDNeRF_Architecture_v21"><br>
         <div class="content has-text-justified">
           <p>
-            Quantitative comparison on REDS4 for ×4 VSRDB.
-            All results are calculated on the RGB channel. Red and blue colors indicate the best and second-best performance, respectively.
-            The superscript <sup>*</sup> indicates that the model is retrained on the <a target="_blank" rel="noopener noreferrer" href="https://openaccess.thecvf.com/content_CVPRW_2019/html/NTIRE/Nah_NTIRE_2019_Challenge_on_Video_Deblurring_and_Super-Resolution_Dataset_and_CVPRW_2019_paper.html">REDS</a> training  dataset for VSRDB.
+            Quantitative comparison on VFHQ Blind setting.
           </p>
         </div>
       </div>
@@ -312,10 +307,10 @@ bulmaCarousel.attach('#results-carousel', {
       <h2 class="title is-3">Qualitative Results</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
-          <image src="./static/image/qualitative_result.png" class="img-responsive" alt="DDNeRF_Architecture_v21"><br>
+          <image src="./static/image/figresult.png" class="img-responsive" alt="DDNeRF_Architecture_v21"><br>
           <div class="content has-text-justified">
             <p>
-             Visual comparison results of different methods for ×4 VSRDB.
+             Visual comparison results of different methods.
             </p>
           </div>
         </div>
@@ -332,7 +327,7 @@ bulmaCarousel.attach('#results-carousel', {
 
         <div class="content has-text-justified">
           <p>
-            This work was supported by the Institute of Information & communications Technology Planning & Evaluation (IITP) grant funded by the Korea government (MSIT): No. 2021-0-00087, Development of high-quality conversion technology for SD/HD low-quality media and No. RS2022-00144444, Deep Learning Based Visual Representational Learning and Rendering of Static and Dynamic Scenes.
+            This Research is Supported by the National Key Research and Development Program from the Ministry of Science and Technology of the PRC (No.2021ZD0110600), Sichuan Science and Technology Program (No.2022ZYD0116), Sichuan Provincial M. C. Integration Office Program, and IEDA Laboratory of SWUST, Grant CEIEC-2022-ZM02-0247. Thanks to Dr. Li Xu and Gang He for their constructive suggestions on this paper.
           </p>
         </div>
       </div>
@@ -345,10 +340,10 @@ bulmaCarousel.attach('#results-carousel', {
 <section class="section" id="BibTeX">
   <div class="container is-widescreen content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@inproceedings{youk2024fmanet,
-  author    = {Geunhyuk Youk and Jihyong Oh and Munchurl Kim},
-  title     = {FMA-Net: Flow-Guided Dynamic Filtering and Iterative Feature Refinement with Multi-Attention for Joint Video Super-Resolution and Deblurring},
-  booktitle = {CVPR},
+    <pre><code>@inproceedings{kpgtformer,
+  author    = {Kepeng Xu and Li Xu and Gang He and Wenxin Yu and Yunsong Li},
+  title     = {Beyond Alignment: Blind Video Face Restoration via Parsing-Guided Temporal-Coherent Transformer},
+  booktitle = {IJCAI},
   year      = {2024},
  }</code></pre>
   </div>
@@ -362,7 +357,7 @@ bulmaCarousel.attach('#results-carousel', {
          href="">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a target="_blank" rel="noopener noreferrer" class="icon-link" href="https://github.com/KAIST-VICLab" class="external-link" disabled>
+      <a target="_blank" rel="noopener noreferrer" class="icon-link" href="https://github.com/kepengxu/PGTFormer" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -371,7 +366,7 @@ bulmaCarousel.attach('#results-carousel', {
         <div class="content">
           <p>
             We thank the authors of <a target="_blank" rel="noopener noreferrer" href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>  that kindly open sourced the template of this website.
-            Please visit our <a target="_blank" rel="noopener noreferrer" href="https://github.com/KAIST-VICLab">VIC-Lab</a> for more interesting researches
+            Please visit our <a target="_blank" rel="noopener noreferrer" href="https://kepengxu.github.io/">LAB</a> for more interesting researches.
           </p>
         </div>
       </div>
