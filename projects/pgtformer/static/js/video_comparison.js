@@ -220,11 +220,11 @@ function initVideo() {
 //   playVids(vid.id);
 // }
 
-// function changeVideo(videoSrc){
-//   vid = document.getElementById("viz_input");
-//   vid.src = videoSrc;
-//   vid.play();
-// }
+function changeVideo(videoSrc){
+  vid = document.getElementById("viz_input");
+  vid.src = videoSrc;
+  vid.play();
+}
 
 function togglePlay() {
   vid = document.getElementById("viz_input");
