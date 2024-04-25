@@ -177,48 +177,48 @@ function resizeAndPlay(element) {
 
 var videoInitialized = false;
 
-function initVideo() {
-  if (videoInitialized === true) {
-    return;
-  }
-  videoInitialized = true;
-  vid = document.getElementById("viz_input");
-  var cv = document.getElementById(vid.id + "Merge");
-  cv.width = vid.videoWidth / 2;
-  cv.height = vid.videoHeight;
-  vid.play();
-  vid.style.height = "0px"; // Hide video without stopping it
-  playVids(vid.id);
-}
-
 // function initVideo() {
 //   if (videoInitialized === true) {
 //     return;
 //   }
 //   videoInitialized = true;
-//   var vid = document.getElementById("viz_input");
+//   vid = document.getElementById("viz_input");
 //   var cv = document.getElementById(vid.id + "Merge");
-
-//   // 定义缩放比例
-//   var scale = 0.5;  // 缩小到50%
-
-//   // 设置画布尺寸为视频原始尺寸的一定比例
-//   cv.width = vid.videoWidth * scale ;
-//   cv.height = vid.videoHeight * scale;
-
-//   // 设置视频元素的CSS样式以匹配缩放
-//   vid.style.transform = `scale(${scale})`;
-//   vid.style.transformOrigin = 'top left';
-
-//   // 计算并设置画布偏移量，以便居中画布
-//   cv.style.position = "absolute";
-//   cv.style.left = `${(vid.videoWidth * scale) / 2 - (cv.width / 2)}px`;
-//   cv.style.top = `${(vid.videoHeight * scale) / 2 - (cv.height / 2)}px`;
-
+//   cv.width = vid.videoWidth / 2;
+//   cv.height = vid.videoHeight;
 //   vid.play();
-//   vid.style.height = "0px"; // 隐藏视频，但不停止播放
+//   vid.style.height = "0px"; // Hide video without stopping it
 //   playVids(vid.id);
 // }
+
+function initVideo() {
+  if (videoInitialized === true) {
+    return;
+  }
+  videoInitialized = true;
+  var vid = document.getElementById("viz_input");
+  var cv = document.getElementById(vid.id + "Merge");
+
+  // 定义缩放比例
+  var scale = 0.5;  // 缩小到50%
+
+  // 设置画布尺寸为视频原始尺寸的一定比例
+  cv.width = vid.videoWidth * scale ;
+  cv.height = vid.videoHeight * scale;
+
+  // 设置视频元素的CSS样式以匹配缩放
+  vid.style.transform = `scale(${scale})`;
+  vid.style.transformOrigin = 'top left';
+
+  // 计算并设置画布偏移量，以便居中画布
+  cv.style.position = "absolute";
+  cv.style.left = `${(vid.videoWidth * scale) / 2 - (cv.width / 2)}px`;
+  cv.style.top = `${(vid.videoHeight * scale) / 2 - (cv.height / 2)}px`;
+
+  vid.play();
+  vid.style.height = "0px"; // 隐藏视频，但不停止播放
+  playVids(vid.id);
+}
 
 function changeVideo(videoSrc){
   vid = document.getElementById("viz_input");
