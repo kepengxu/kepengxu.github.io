@@ -12,11 +12,11 @@ repository               : "kepengxu/kepengxu.github.io"
 google_scholar_stats_use_cdn : true
 
 # google analytics
-google_analytics_id      :  G-QRQSXV0K5T # get google_analytics_id from https://analytics.google.com/analytics/
+google_analytics_id      :  G-791HCGXYX6 # get google_analytics_id from https://analytics.google.com/analytics/
 
 # SEO Related
-google_site_verification :  # get google_site_verification from https://search.google.com/search-console/about
-bing_site_verification   :  # get bing_site_verification from https://www.bing.com/webmasters/about
+google_site_verification : GBnoppcYrhPdbEn6VwTMmaUoC4lkTzdM0CQJxHNUrsY # get google_site_verification from https://search.google.com/search-console/about
+bing_site_verification   : C80A7FFE7DEA1792A0109E6888D29ADE # get bing_site_verification from https://www.bing.com/webmasters/about
 baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.baidu.com/login/index?u=/site/index
 
 # Site Author
