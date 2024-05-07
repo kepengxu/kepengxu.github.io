@@ -115,6 +115,8 @@ Gang He, **Kepeng Xu***, Li Xu et al.[![](https://img.shields.io/github/stars/ii
 
 # 💬 Invited Talks
 <!-- - *2024.04*, Image Transmission Institute talk (End-to-End Camera Imaging). -->
+
+- *2024.04*,  video enhancement technology Alipay intersnal talk.
 - *2024.04*, HDR video generation and quality assessment technology Alipay intersnal talk.
 - *2024.04*, HDR video generation and quality assessment technology Alipay intersnal talk.
 - *2024.01*, Real World HDR video generation technology Alipay intersnal talk.
