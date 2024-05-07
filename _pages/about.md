@@ -89,8 +89,16 @@ Gang He, **Kepeng Xu***, Li Xu et al.[![](https://img.shields.io/github/stars/ii
 
 - `Arxiv` [Sdrtv-to-hdrtv conversion via spatial-temporal feature fusion](https://arxiv.org/pdf/2211.02297), **Kepeng Xu***, Li Xu et al. 
 
+- `ICONIP` [Inpainting with Sketch Reconstruction and Comprehensive Feature Selection](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=I1x3S4gAAAAJ&citation_for_view=I1x3S4gAAAAJ:UeHWp8X0CEIC), S Li, L Lu, K Xu et al. 
 
 
+- `ICONIP` [LPI-Net: Lightweight Inpainting Network with Pyramidal Hierarchy](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=I1x3S4gAAAAJ&citation_for_view=I1x3S4gAAAAJ:u-x6o8ySG0sC), S Li, L Lu, Z Li, K Xu et al. 
+
+- `ICMEW` [Segmentation of building footprints with xception and iouloss](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=I1x3S4gAAAAJ&citation_for_view=I1x3S4gAAAAJ:u-x6o8ySG0sC), K Xu, Y Zhang, W Yu et al. 
+
+- `ICIP` [Interactive separation network for image inpainting](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=I1x3S4gAAAAJ&citation_for_view=I1x3S4gAAAAJ:d1gkVwhDpl0C), S Li, L Lu, Z Zhang, X Cheng, K Xu et al. 
+
+- `ICONIP` [IRSNET: An inception-ResNet feature reconstruction model for building segmentation](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=I1x3S4gAAAAJ&authuser=1&citation_for_view=I1x3S4gAAAAJ:ufrVoPGSRksC), K Xu, L Nie, Z Zhang et al. 
 
 
 
