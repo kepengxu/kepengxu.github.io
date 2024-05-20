@@ -109,16 +109,16 @@ Gang He, **Kepeng Xu***, Li Xu et al.[![](https://img.shields.io/github/stars/ii
 - *2019.06* Learning-Based Image Inpainting Runner Award. 
 
 # 📖 Educations
-- *2023.09 - 2027.06(now)*, PhD, Xidian University, Xi'an.
+- *2023.09 - 2027.06(now)*, Ph.D, Xidian University, Xi'an.
 - *2020.09 - 2023.06*, Master, Xidian University, Xi'an.
 
 
 # 💬 Invited Talks
 <!-- - *2024.04*, Image Transmission Institute talk (End-to-End Camera Imaging). -->
 
-- *2024.04*,  video enhancement technology Alipay intersnal talk.
-- *2024.04*, HDR video generation and quality assessment technology Alipay intersnal talk.
-- *2024.04*, HDR video generation and quality assessment technology Alipay intersnal talk.
+- *2024.04*,  video enhancement technology Alipay internal talk.
+- *2024.04*, HDR video generation and quality assessment technology Alipay internal talk.
+- *2024.04*, HDR video generation and quality assessment technology Alipay internal talk.
 - *2024.01*, Real World HDR video generation technology Alipay intersnal talk.
 - *2022.10*, HDR video generation technology talk ACM MM.
 - *2022.08*, HDR video generation key technology solves MEGVII internal talk.
