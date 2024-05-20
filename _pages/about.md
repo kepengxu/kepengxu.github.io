@@ -119,7 +119,7 @@ Gang He, **Kepeng Xu***, Li Xu et al.[![](https://img.shields.io/github/stars/ii
 - *2024.04*,  video enhancement technology Alipay internal talk.
 - *2024.04*, HDR video generation and quality assessment technology Alipay internal talk.
 - *2024.04*, HDR video generation and quality assessment technology Alipay internal talk.
-- *2024.01*, Real World HDR video generation technology Alipay intersnal talk.
+- *2024.01*, Real World HDR video generation technology Alipay internal talk.
 - *2022.10*, HDR video generation technology talk ACM MM.
 - *2022.08*, HDR video generation key technology solves MEGVII internal talk.
 - *2022.05*, Talk 3D Rendering Course. 
