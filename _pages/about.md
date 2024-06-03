@@ -58,6 +58,25 @@ My research team secured the fourth place in the objective quality category at t
 
 
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Awesome-SDRTV-to-HDRTV</div><img src='images/hdrimage.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Awesome-SDRTV-to-HDRTV](https://github.com/kepengxu/Awesome-SDRTV-to-HDRTV-Video-nverse-Tone-Mapping/tree/main)
+
+
+</div>
+</div>
+
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Awesome-Video Face Restoration</div><img src='images/vfrawe.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Awesome-Video Face Restoration](https://github.com/kepengxu/Awesome-Video-Face-Restoration/tree/main)
+
+
+</div>
+</div>
 
 
 
