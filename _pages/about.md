@@ -30,8 +30,9 @@ My research team secured the fourth place in the objective quality category at t
 
 
 # 🔥 News
+- *2024.07*: 🎉 	`An End-to-End Real-World Camera Imaging Pipeline` is accepted by ACM MM 2024.
 - *2024.05*: 🎉 Invited by NeurIPS as Reviewer.
-- *2024.04*: 🎉 One paper is accepted by IJCAI 2024.
+- *2024.04*: 🎉 `Beyond Alignment: Blind Video Face Restoration via Parsing-Guided Temporal-Coherent Transformer`is accepted by IJCAI 2024.
 - *2024.03*: 🎉 Invited by MM as Program Reviewer.
 
 
@@ -41,6 +42,23 @@ My research team secured the fourth place in the objective quality category at t
 - *2022.02*: I release a modern and responsive academic personal [homepage template](https://github.com/RayeRen/acad-homepage.github.io). Welcome to STAR and FORK! -->
 
 # 📝 Publications 
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACMMM 2024</div><img src='images/framework.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[An End-to-End Real-World Camera Imaging Pipeline](https://arxiv.org)
+
+**Kepeng Xu**, Zijia Ma, Li Xu et al.[![](https://img.shields.io/github/stars/kepengxu/RealCamNet?style=social&label=Code+Stars)](https://github.com/kepengxu/RealCamNet)
+
+
+[**Project**](https://kepengxu.github.io/projects/realcamnet/) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+
+
+</div>
+</div>
+
+
 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">IJCAI 2024</div><img src='images/ijcaiimage.png' alt="sym" width="100%"></div></div>
