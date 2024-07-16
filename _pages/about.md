@@ -47,7 +47,7 @@ My research team secured the fourth place in the objective quality category at t
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACMMM 2024</div><img src='images/framework.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[An End-to-End Real-World Camera Imaging Pipeline](https://arxiv.org)
+[An End-to-End Real-World Camera Imaging Pipeline](https://kepengxu.github.io/projects/realcamnet/realcamnet.pdf)
 
 **Kepeng Xu**, Zijia Ma, Li Xu et al.[![](https://img.shields.io/github/stars/kepengxu/RealCamNet?style=social&label=Code+Stars)](https://github.com/kepengxu/RealCamNet)
 
