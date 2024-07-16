@@ -176,7 +176,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a target="_blank" rel="noopener noreferrer" href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -184,7 +184,7 @@
                   </span>
                   <span>Paper</span>
                 </a>
-              </span>
+              </span> -->
               <span class="link-block">
                 <a target="_blank" rel="noopener noreferrer" href="https://kepengxu.github.io/projects/realcamnet/realcamnet.pdf"
                    class="external-link button is-normal is-rounded is-dark">
@@ -195,7 +195,7 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a target="_blank" rel="noopener noreferrer" href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -203,7 +203,7 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
                 <a target="_blank" rel="noopener noreferrer" href="https://github.com/kepengxu/RealCamNet"
@@ -270,13 +270,13 @@ bulmaCarousel.attach('#results-carousel', {
 
 <section class="section">
   <div class="container is-widescreen">
-    <h2 class="title is-3">Network Architecture</h2>
+    <h2 class="title is-3">Graphical Abstract</h2>
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
-        <image src="./static/image/framework.png" class="img-responsive" alt="DDNeRF_Architecture_v21"><br>
+        <image src="./static/image/graphabstract.png" class="img-responsive" alt="realcamnet_graphical_abstract"><br>
         <div class="content has-text-justified">
           <p>
-            <b>Top:</b> The architecture of PGTformer. <br>
+            <b>Top:</b> Compared with previous methods, our approach takes into account multiple complex distortions.. <br>
           </p>
         </div>
       </div>
@@ -284,15 +284,52 @@ bulmaCarousel.attach('#results-carousel', {
   </div>
 </section>
 
+
 <section class="section">
   <div class="container is-widescreen">
-    <h2 class="title is-3">Quantitative Results</h2>
+    <h2 class="title is-3">Coordinate-Related Distortion</h2>
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
-        <image src="./static/image/tableimage.png" class="img-responsive" alt="DDNeRF_Architecture_v21"><br>
+        <image src="./static/image/lensshadingexample.png" class="img-responsive" alt="realcamnet_coordinate_related_distortion"><br>
         <div class="content has-text-justified">
           <p>
-            Quantitative comparison on VFHQ Blind setting.
+            <b>Top:</b> Examples of coordinate-related distortion (vignetting and dark shading). <br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-widescreen">
+    <h2 class="title is-3">Network Architecture</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <image src="./static/image/networkarch.png" class="img-responsive" alt="realcamnet_network_architecture"><br>
+        <div class="content has-text-justified">
+          <p>
+            <b>Top:</b> The architecture of RealCamNet. <br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-widescreen">
+    <h2 class="title is-3">Rate-Distortion Curve Results</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <image src="./static/image/rdcurve.png" class="img-responsive" alt="realcamnet_rd_curve_results"><br>
+        <div class="content has-text-justified">
+          <p>
+            Quantitative comparison on Rate-Distortion Curve.
           </p>
         </div>
       </div>
@@ -302,13 +339,15 @@ bulmaCarousel.attach('#results-carousel', {
 
   <section class="section">
     <div class="container is-widescreen">
-      <h2 class="title is-3">Qualitative Results</h2>
+      <h2 class="title is-3">Quantitative results</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
-          <image src="./static/image/figresult.png" class="img-responsive" alt="DDNeRF_Architecture_v21"><br>
+          <image src="./static/image/tableresults.png" class="img-responsive" alt="realcamnet_quantitative_results"><br>
           <div class="content has-text-justified">
             <p>
-             Visual comparison results of different methods.
+              Quantitative results. We compare with state-of-the-art ISPNet and image compression methods, including learning-based methods:
+             PyNet(CVPR'20), LiteISPNet(ICCV'21), MwISPNet(ECCV'20), MLIC(ACMMM'23), TCM(CVPR'23) and the most advanced traditional image compression method VTM/H.266.
+             We show BD-Rate, BD-PSNR, BD-MSSSIM, BD-δE and BD-LPPHS for all methods. We use PyNet+VTM as anchor.
             </p>
           </div>
         </div>
@@ -316,16 +355,35 @@ bulmaCarousel.attach('#results-carousel', {
     </div>
     </section>
 
+
+    <section class="section">
+      <div class="container is-widescreen">
+        <h2 class="title is-3">Visual Comparison Results</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full">
+            <image src="./static/image/visualresults.png" class="img-responsive" alt="realcamnet_quantitative_results"><br>
+            <div class="content has-text-justified">
+              <p>
+                Compared with the state-of-the-art methods, our framework, optimized end-to-end, demonstrates significant enhancements in imaging systems' performance. It offers comprehensive benefits, encompassing reduced bit rate, augmented color fidelity, and elevated PSNR.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+
+
 <section class="section">
   <div class="container is-widescreen">
     <!-- Concurrent Work. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Acknowledgement</h2>
+        <h2 class="title is-3">Acknowledgements</h2>
 
         <div class="content has-text-justified">
           <p>
-            This Research is Supported by the National Key Research and Development Program from the Ministry of Science and Technology of the PRC (No.2021ZD0110600), Sichuan Science and Technology Program (No.2022ZYD0116), Sichuan Provincial M. C. Integration Office Program, and IEDA Laboratory of SWUST, Grant CEIEC-2022-ZM02-0247. Thanks to Dr. Li Xu and Gang He for their constructive suggestions on this paper.
+            I would like to extend my heartfelt gratitude to Ma Zijia for his invaluable contributions to the experiments. Special thanks go to Xu Li for her insightful suggestions on the design of this thesis. I am also deeply grateful to He Gang for his unwavering support in the establishment of the thesis project.
           </p>
         </div>
       </div>
