@@ -53,8 +53,7 @@ My research team secured the fourth place in the objective quality category at t
 
 
 [**Project**](https://kepengxu.github.io/projects/realcamnet/) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-
-
+- End-to-end imaging pipeline for complex distortions
 </div>
 </div>
 
@@ -70,7 +69,7 @@ My research team secured the fourth place in the objective quality category at t
 
 
 [**Project**](https://kepengxu.github.io/projects/pgtformer/) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-
+- Clearer and more consistent video face restoration.
 
 </div>
 </div>
