@@ -148,6 +148,7 @@ Gang He, **Kepeng Xu***, Li Xu et al.[![](https://img.shields.io/github/stars/ii
 # 📖 Educations
 - *2023.09 - 2027.06(now)*, Ph.D, Xidian University, Xi'an.
 - *2020.09 - 2023.06*, Master, Xidian University, Xi'an.
+- *2016.09 - 2020.06*, Information and Computing Science, Southwest University of Science and Technology, Mianyang.
 
 
 # 💬 Invited Talks
