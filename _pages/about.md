@@ -30,6 +30,7 @@ My research team secured the fourth place in the objective quality category at t
 
 
 # 🔥 News
+- *2024.08*: 🎉 !🔥 	5 Paper is accepted by ACM MM Workshop 2024.
 - *2024.07*: 🎉 !🔥 	`An End-to-End Real-World Camera Imaging Pipeline` is accepted by ACM MM 2024.
 - *2024.05*: 🎉 Invited by NeurIPS as Reviewer.
 - *2024.04*: 🎉 `Beyond Alignment: Blind Video Face Restoration via Parsing-Guided Temporal-Coherent Transformer`is accepted by IJCAI 2024.
@@ -116,6 +117,19 @@ Gang He, **Kepeng Xu***, Li Xu et al.[![](https://img.shields.io/github/stars/ii
 </div>
 
 <!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
+
+- `ACMMM24 EMCLR` [	
+Neural Video Compression with Re-Parametrisation Scene Content-Adaptive Network], **Kepeng Xu**, Gang He† et al.
+- `ACMMM24 EMCLR` [	
+Adaptive Dual-Domain Debanding: A Novel Algorithm for Image and Video Enhancement], **Kepeng Xu**, Gang He† et al.
+- `ACMMM24 Meet4MM` [High-dynamic Range Video Generation Method Based On Adaptive Priors Dynamic Mapping], Gang He, SiqiWang,**Kepeng Xu** et al.
+- `ACMMM24 QoEVMA` [	
+No-Reference Image Quality Assessment via Local and Global Multi-Scale Feature Integration], **Kepeng Xu**, Gang He† et al.
+- `ACMMM24 QoEVMA` [	
+Banding Detection via Adaptive Global Frequency Domain Analysis],  Gang He,**Kepeng Xu** † et al. 
+
+
+
 
 - `Arxiv` [Towards Robust SDRTV-to-HDRTV via Dual Inverse Degradation Network](https://arxiv.org/html/2307.03394v2), **Kepeng Xu***, Li Xu*, Gang He† et al. 
 <!-- [![](https://img.shields.io/github/stars/iii935/DIDNet?style=social&label=Code+Stars)](https://github.com/iii935/DIDNet) -->
