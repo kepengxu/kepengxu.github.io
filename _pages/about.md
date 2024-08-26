@@ -23,6 +23,8 @@ Seeking opportunities for Visiting scholar Ph.D
 # Profile
 I am currently pursuing a Ph.D. at Xidian University, focusing on research areas including video image enhancement, high dynamic range video generation, and video compression. 
 
+I am looking for interdisciplinary collaborative research, including but not limited to, **multi-modal perception and understanding**, **safe and trustworthy AI**.
+
 ## Research and Publications
 To date, I have authored over 10 scholarly articles and actively participate as a peer reviewer for top-tier conferences such as CVPR, ICCV, ACM MM, and AAAI. My work primarily explores the intersections of image processing and data compression in digital media technologies.
 
