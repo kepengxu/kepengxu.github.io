@@ -17,8 +17,8 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-# Seeking Joint Ph.D. Collaboration
-Seeking opportunities for joint Ph.D. programs (联合培养).
+# Seeking Visiting scholar
+Seeking opportunities for Visiting scholar Ph.D
 
 # Profile
 I am currently pursuing a Ph.D. at Xidian University, focusing on research areas including video image enhancement, high dynamic range video generation, and video compression. 
