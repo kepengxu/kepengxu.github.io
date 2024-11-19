@@ -35,7 +35,11 @@ My research team secured the fourth place in the objective quality category at t
 
 
 # 🔥 News
+<<<<<<< HEAD
 - *2024.03*: 🎉 Invited by CVPR'2025 as Reviewer.
+=======
+- *2024.08*: 🎉 !🔥 	🤗🤗🤗 The Inference Code of PGTFormer is in huggingface [PGTFormer][![](https://img.shields.io/github/stars/kepengxu/PGTFormer?style=social&label=Code+Stars)](https://github.com/kepengxu/PGTFormer)(Video face Restoration is released).
+>>>>>>> 7db35320ea8bd2773a4008c7fa902609a23b72a6
 - *2024.08*: 🎉 !🔥 	5 Paper is accepted by ACM MM Workshop 2024.
 - *2024.07*: 🎉 !🔥 	`An End-to-End Real-World Camera Imaging Pipeline` is accepted by ACM MM 2024.
 - *2024.05*: 🎉 Invited by NeurIPS as Reviewer.
