@@ -35,6 +35,7 @@ My research team secured the fourth place in the objective quality category at t
 
 
 # 🔥 News
+- *2024.03*: 🎉 Invited by CVPR'2025 as Reviewer.
 - *2024.08*: 🎉 !🔥 	5 Paper is accepted by ACM MM Workshop 2024.
 - *2024.07*: 🎉 !🔥 	`An End-to-End Real-World Camera Imaging Pipeline` is accepted by ACM MM 2024.
 - *2024.05*: 🎉 Invited by NeurIPS as Reviewer.
@@ -50,10 +51,24 @@ My research team secured the fourth place in the objective quality category at t
 # 📝 Publications 
 
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ArXiv</div><img src='images\realhdrtvnet.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Beyond Feature Mapping GAP: Integrating Real HDRTV Priors for Superior SDRTV-to-HDRTV Conversion](https://arxiv.org/abs/2411.10775)
+
+**Kepeng Xu**, Li Xu, Gang He, Zhiqiang Zhang, Wenxin Yu, Shihao Wang, Dajiang Zhou, Yunsong Li.
+
+
+[**Project**] <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+- A more generalizable real-world SDRTV to HDRTV conversion method
+</div>
+</div>
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACMMM 2024</div><img src='images/framework.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[An End-to-End Real-World Camera Imaging Pipeline](https://kepengxu.github.io/projects/realcamnet/realcamnet.pdf)
+[An End-to-End Real-World Camera Imaging Pipeline](https://arxiv.org/abs/2411.10773)
 
 **Kepeng Xu**, Zijia Ma, Li Xu et al.[![](https://img.shields.io/github/stars/kepengxu/RealCamNet?style=social&label=Code+Stars)](https://github.com/kepengxu/RealCamNet)
 
@@ -160,6 +175,7 @@ Banding Detection via Adaptive Global Frequency Domain Analysis],  Gang He,**Kep
 
 # 🎖 Honors and Awards
 
+- *2024.09* National Scholarships for PhD Candidates. 
 - *2022.09* National Scholarships for Postgraduate Students. 
 - *2022.04* CLIC video compression PSNR ranked fourth. 
 - *2019.06* Learning-Based Image Inpainting Runner Award. 
