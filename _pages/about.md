@@ -35,6 +35,7 @@ My research team secured the fourth place in the objective quality category at t
 
 
 # 🔥 News
+- *2024.12*: 🎉 As a technical support, the restoration of the historical video of the 25th anniversary of Macau's return to China was realized.  Related reports see[CCTV](https://app.cctv.com/special/m/livevod/index.html?vtype=2&guid=9c7d772eff194040bd6d126d78b795bb&vsetId=VSET100431636664),[WeChat](https://app.cctv.com/special/m/livevod/index.html?vtype=2&guid=9c7d772eff194040bd6d126d78b795bb&vsetId=VSET100431636664),[央视网](https://weibo.com/u/3266943013),[Xidian News](https://news.xidian.edu.cn/info/2106/245326.htm),[Collect]()
 - *2024.10*: 🎉 Invited by CVPR'2025 as Reviewer.
 - *2024.08*: 🎉 !🔥 	🤗🤗🤗 The Inference Code of PGTFormer is in huggingface [PGTFormer][![](https://img.shields.io/github/stars/kepengxu/PGTFormer?style=social&label=Code+Stars)](https://github.com/kepengxu/PGTFormer)(Video face Restoration is released).
 - *2024.08*: 🎉 !🔥 	5 Paper is accepted by ACM MM Workshop 2024.
