@@ -35,7 +35,7 @@ My research team secured the fourth place in the objective quality category at t
 
 
 # 🔥 News
-- *2025.01*: 🎉 Received funding from the 2024 China Association for Science and Technology Young Talent Support Project Doctoral Special Program
+<!-- - *2025.01*: 🎉 Received funding from the 2024 China Association for Science and Technology Young Talent Support Project Doctoral Special Program -->
 - *2024.12*: 🎉 As a technical support, the restoration of the historical video of the 25th anniversary of Macau's return to China was realized.  Related reports see[CCTV](https://app.cctv.com/special/m/livevod/index.html?vtype=2&guid=9c7d772eff194040bd6d126d78b795bb&vsetId=VSET100431636664),[WeChat](https://app.cctv.com/special/m/livevod/index.html?vtype=2&guid=9c7d772eff194040bd6d126d78b795bb&vsetId=VSET100431636664),[央视网](https://weibo.com/u/3266943013),[Xidian News](https://news.xidian.edu.cn/info/2106/245326.htm),[Collect](https://github.com/kepengxu/kepengxu.github.io/blob/main/images/report.png)
 - *2024.10*: 🎉 Invited by CVPR'2025 as Reviewer.
 - *2024.08*: 🎉 !🔥 	🤗🤗🤗 The Inference Code of PGTFormer is in huggingface [PGTFormer][![](https://img.shields.io/github/stars/kepengxu/PGTFormer?style=social&label=Code+Stars)](https://github.com/kepengxu/PGTFormer)(Video face Restoration is released).
@@ -177,7 +177,6 @@ Banding Detection via Adaptive Global Frequency Domain Analysis],  Gang He,**Kep
 
 
 # 🎖 Honors and Awards
-- *2025.01* Received funding from the 2024 China Association for Science and Technology Young Talent Support Project Doctoral Special Program
 - *2024.09* National Scholarships for PhD Candidates. 
 - *2022.09* National Scholarships for Postgraduate Students. 
 - *2022.04* CLIC video compression PSNR ranked fourth. 
