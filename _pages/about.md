@@ -54,7 +54,7 @@ My research team secured the fourth place in the objective quality category at t
 # 📝 Publications 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ArXiv</div><img src='images\realhdrtvnet.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IJCAI-25</div><img src='images\realhdrtvnet.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [Beyond Feature Mapping GAP: Integrating Real HDRTV Priors for Superior SDRTV-to-HDRTV Conversion](https://arxiv.org/abs/2411.10775)
@@ -66,6 +66,38 @@ My research team secured the fourth place in the objective quality category at t
 - A more generalizable real-world SDRTV to HDRTV conversion method
 </div>
 </div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IJCAI-25</div><img src='images\hdfacerestoration.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Unleashing the Potential of Transformer Flow for Photorealistic Face Restoration]
+
+**Kepeng Xu**, Li Xu, Gang He, Wei Chen, Xianyun Wu, Wenxin Yu.
+
+
+[**Project**] <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+- Transformer Flow Matching Drive High-Quality Face Restoration
+</div>
+</div>
+
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IJCAI-25</div><img src='images\fckt.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[FCKT: Fine-Grained Cross-Task Knowledge Transfer with Semantic Contrastive Learning for Targeted Sentiment Analysis]
+
+Wei Chen, Zhao Zhang, Meng Yuan, **Kepeng Xu**, Fuzhen Zhuang.
+
+
+[**Project**] <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+- This paper introduces FCKT, a method that better connects aspect extraction and sentiment prediction to improve targeted sentiment analysis.
+
+
+</div>
+</div>
+
+
 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACMMM 2024</div><img src='images/framework.png' alt="sym" width="100%"></div></div>
