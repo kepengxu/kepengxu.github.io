@@ -35,6 +35,7 @@ My research team secured the fourth place in the objective quality category at t
 
 
 # 🔥 News
+- *2025.05*: 📝 3 papers accepted by IJCAI in May 2025
 - *2025.01*: 🎉 Received funding from the 2024 China Association for Science and Technology Young Talent Support Project Doctoral Special Program
 - *2024.12*: 🎉 As a technical support, the restoration of the historical video of the 25th anniversary of Macau's return to China was realized.  Related reports see[CCTV](https://app.cctv.com/special/m/livevod/index.html?vtype=2&guid=9c7d772eff194040bd6d126d78b795bb&vsetId=VSET100431636664),[WeChat](https://app.cctv.com/special/m/livevod/index.html?vtype=2&guid=9c7d772eff194040bd6d126d78b795bb&vsetId=VSET100431636664),[央视网](https://weibo.com/u/3266943013),[Xidian News](https://news.xidian.edu.cn/info/2106/245326.htm),[Collect](https://github.com/kepengxu/kepengxu.github.io/blob/main/images/report.png)
 - *2024.10*: 🎉 Invited by CVPR'2025 as Reviewer.
