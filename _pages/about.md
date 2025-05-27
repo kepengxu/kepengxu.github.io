@@ -77,7 +77,7 @@ My research team secured the fourth place in the objective quality category at t
 **Kepeng Xu**, Li Xu, Gang He, Wei Chen, Xianyun Wu, Wenxin Yu.
 
 
-[**Project**] <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+[**Project**](https://kepengxu.github.io/projects/onmiface/) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 - Transformer Flow Matching Drive High-Quality Face Restoration
 </div>
 </div>
