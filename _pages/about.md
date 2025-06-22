@@ -173,6 +173,9 @@ Gang He, **Kepeng Xu***, Li Xu et al.[![](https://img.shields.io/github/stars/ii
 
 <!-- - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020** -->
 
+- `TGRS'25` [	
+IOVarNet: Inner-outer Variation Synergy Network for Infrared Small Target Detection], Shangwei Deng,Qianwen Ma,Bincheng Li,Liaoran Jin,**Kepeng Xu**,Shangqi Deng,Xiaobo Li,Haofeng Hu.
+
 - `ACMMM24 EMCLR` [	
 Neural Video Compression with Re-Parametrisation Scene Content-Adaptive Network], **Kepeng Xu**, Gang He† et al.
 - `ACMMM24 EMCLR` [	
