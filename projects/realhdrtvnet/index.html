@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Image Signal Process">
+  <meta name="keywords" content="Image Signal Process, Image Compression">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>An End-to-End Real-World Camera Imaging Pipeline</title>
+  <style>
+    @keyframes shake {
+      0% {transform: translateX(0);}
+      10%, 90% {transform: translateX(-5px);}
+      20%, 80% {transform: translateX(5px);}
+      30%, 50%, 70% {transform: translateX(-5px);}
+      40%, 60% {transform: translateX(5px);}
+      100% {transform: translateX(0);}
+    }
+
+    #blur {
+      /* font-size: 60px; */
+      color: rgb(52,144,197);
+      filter: blur(3x);
+      -webkit-filter: blur(2.5px);
+      animation: shake 1s infinite;
+      display: inline-block;;
+      clear: none;
+    }
+    #shake {
+      /* font-size: 60px; */
+      animation: shake 1s infinite;
+      display: inline-block;;
+      clear: none;
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRQSXV0K5T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QRQSXV0K5T');
+  </script>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" sizes="256x256" href="./static/image/apple.png" type="image/png"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/video_comparison.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <!--<div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a target="_blank" rel="noopener noreferrer" class="navbar-item" href="https://www.viclab.kaist.ac.kr">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Related Works
+        </a>
+        <div class="navbar-dropdown">
+          <a target="_blank" rel="noopener noreferrer" class="navbar-item" href="https://hangg7.com/dycheck/">
+            Dycheck (Neurips 2022)
+          </a>
+          <a target="_blank" rel="noopener noreferrer" class="navbar-item" href="https://robust-dynrf.github.io/">
+            RoDynRF (CVPR 2023)
+          </a>
+          <a target="_blank" rel="noopener noreferrer" class="navbar-item" href="https://caoang327.github.io/HexPlane/">
+            HexPlane (CVPR 2023)
+          </a>
+          <a target="_blank" rel="noopener noreferrer" class="navbar-item" href="https://wangpeng000.github.io/BAD-NeRF/">
+            BAD-NeRF (CVPR 2023)
+          </a>
+          <a target="_blank" rel="noopener noreferrer" class="navbar-item" href="https://dogyoonlee.github.io/dpnerf/">
+            DP-NeRF (CVPR 2023)
+          </a>
+          <a target="_blank" rel="noopener noreferrer" class="navbar-item" href="https://jaminfong.cn/tineuvox/">
+            TiNeuVox (ACM SIGGRAPH Asia 2022)
+          </a>
+          <a target="_blank" rel="noopener noreferrer" class="navbar-item" href="https://hypernerf.github.io/">
+            HyperNeRF (ACM Trans. Graph. 2021)
+          </a>
+          <a target="_blank" rel="noopener noreferrer" class="navbar-item" href="https://nerfies.github.io/">
+            Nerfies (ICCV 2021)
+          </a>
+          <a target="_blank" rel="noopener noreferrer" class="navbar-item" href="https://www.cs.cornell.edu/~zl548/NSFF/">
+            NSFF (CVPR 2021)
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>-->
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <div class="title is-2 publication-title">
+            <h1 style="display: inline; clear:none;">
+                  <img src="./static/image/apple.png" width="40", height="40">
+                  <font color="#d91421"><b>RealCamNet:</b></font> An End-to-End Real-World Camera Imaging Pipeline
+              </h1>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a target="_blank" rel="noopener noreferrer" href="https://kepengxu.github.io/">Kepeng Xu</a><sup> 1</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="author-block">
+              <a target="_blank" rel="noopener noreferrer" href="">Zijia Ma</a><sup> 1</sup>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="author-block">
+              <a target="_blank" rel="noopener noreferrer" href="https://icecherylxuli.github.io/">Li Xu</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+              <a target="_blank" rel="noopener noreferrer" href="https://dblp.org/pid/96/3183-2.html">Gang He </a><sup>† 1</sup>
+            </span>
+            <span class="author-block">
+              <a target="_blank" rel="noopener noreferrer" href="">Yunsong Li </a><sup>1</sup>
+              <span class="author-block">
+                <a target="_blank" rel="noopener noreferrer" href="">Wenxin Yu</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a target="_blank" rel="noopener noreferrer" href="">Taichu Han </a><sup>3</sup>
+            <span class="author-block">
+              <a target="_blank" rel="noopener noreferrer" href="">Cheng Yang </a><sup>3</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"> <sup>†</sup>Corresponding authors</span>
+            <!-- <span class="author-block"><sup>†</sup>Corresponding author</span> -->
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Xidian University</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>2</sup>Southwest University of Science and Technology</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>3</sup>Novastar Tech Co., Ltd.</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block", style="color:#346dc2">ACMMM 2024</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a target="_blank" rel="noopener noreferrer" href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a target="_blank" rel="noopener noreferrer" href="https://kepengxu.github.io/projects/realcamnet/realcamnet.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a target="_blank" rel="noopener noreferrer" href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/kepengxu/RealCamNet"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-widescreen">
+    <h2 class="title is-3">Graphical Abstract</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <image src="./static/image/graphabstract.png" class="img-responsive" alt="realcamnet_graphical_abstract"><br>
+        <div class="content has-text-justified">
+          <p>
+            <b>Top:</b> Compared with previous methods, our approach takes into account multiple complex distortions.. <br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+bulmaCarousel.attach('#results-carousel', {
+  slidesToShow: 2,
+  loop: true,
+  pagination: false,
+});
+</script>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent advances in neural camera imaging pipelines have demonstrated notable progress. Nevertheless, the real-world imaging pipeline still faces challenges including the lack of joint optimization in system components, computational redundancies, and optical distortions such as lens shading. In light of this, we propose an end-to-end camera imaging pipeline (RealCamNet) to enhance real-world camera imaging performance. Our methodology diverges from conventional, fragmented multi-stage image signal processing towards end-to-end architecture. This architecture facilitates joint optimization across the full pipeline and the restoration of coordinate-biased distortions. RealCamNet is designed for high-quality conversion from RAW to RGB and compact image compression. Specifically, we deeply analyze coordinate-dependent optical distortions, e.g., vignetting and dark shading, and design a novel Coordinate-Aware Distortion Restoration (CADR) module to restore coordinate-biased distortions. Furthermore, we propose a Coordinate-Independent Mapping Compression (CIMC) module to implement tone mapping and redundant information compression. Existing datasets suffer from misalignment and overly idealized conditions, making them inadequate for training real-world imaging pipelines. Therefore, we collected a real-world imaging dataset. Experiment results show that RealCamNet achieves the best rate-distortion performance with lower inference latency.   
+          </p>
+
+          <p>
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.bilibili.com/video/BV1tT42117t4/"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-widescreen">
+    <h2 class="title is-3">Coordinate-Related Distortion</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <image src="./static/image/lensshadingexample.png" class="img-responsive" alt="realcamnet_coordinate_related_distortion"><br>
+        <div class="content has-text-justified">
+          <p>
+            <b>Top:</b> Examples of coordinate-related distortion (vignetting and dark shading). <br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-widescreen">
+    <h2 class="title is-3">Network Architecture</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <image src="./static/image/networkarch.png" class="img-responsive" alt="realcamnet_network_architecture"><br>
+        <div class="content has-text-justified">
+          <p>
+            <b>Top:</b> The architecture of RealCamNet. <br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-widescreen">
+    <h2 class="title is-3">Rate-Distortion Curve Results</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <image src="./static/image/rdcurve.png" class="img-responsive" alt="realcamnet_rd_curve_results"><br>
+        <div class="content has-text-justified">
+          <p>
+            Quantitative comparison on Rate-Distortion Curve.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-widescreen">
+      <h2 class="title is-3">Quantitative results</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <image src="./static/image/tableresults.png" class="img-responsive" alt="realcamnet_quantitative_results"><br>
+          <div class="content has-text-justified">
+            <p>
+              Quantitative results. We compare with state-of-the-art ISPNet and image compression methods, including learning-based methods:
+             PyNet(CVPR'20), LiteISPNet(ICCV'21), MwISPNet(ECCV'20), MLIC(ACMMM'23), TCM(CVPR'23) and the most advanced traditional image compression method VTM/H.266.
+             We show BD-Rate, BD-PSNR, BD-MSSSIM, BD-δE and BD-LPPHS for all methods. We use PyNet+VTM as anchor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+
+    <section class="section">
+      <div class="container is-widescreen">
+        <h2 class="title is-3">Visual Comparison Results</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full">
+            <image src="./static/image/visual.jpg" class="img-responsive" alt="realcamnet_quantitative_results"><br>
+            <div class="content has-text-justified">
+              <p>
+                Compared with the state-of-the-art methods, our framework, optimized end-to-end, demonstrates significant enhancements in imaging systems' performance. It offers comprehensive benefits, encompassing reduced bit rate, augmented color fidelity, and elevated PSNR.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+
+
+<section class="section">
+  <div class="container is-widescreen">
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Acknowledgements</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            We would like to thank Ma Zijia for his important contribution to the experiment, Xu Li for her constructive suggestions on the thesis design, and He Gang for his support in the process of establishing the thesis topic.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-widescreen content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{realcamnet,
+  author    = {Kepeng Xu and Zijia Ma and Li Xu and Gang He and Yunsong Li and Wenxin Yu and Taichu Han and Cheng Yang},
+  title     = {An End-to-End Real-World Camera Imaging Pipeline},
+  booktitle = {ACM MULTIMEDIA 2024},
+  year      = {2024},
+ }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a target="_blank" rel="noopener noreferrer" class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a target="_blank" rel="noopener noreferrer" class="icon-link" href="https://github.com/kepengxu/RealCamNet" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            We thank the authors of <a target="_blank" rel="noopener noreferrer" href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>  that kindly open sourced the template of this website.
+            Please visit our <a target="_blank" rel="noopener noreferrer" href="https://kepengxu.github.io/">LAB</a> for more interesting researches.
+          </p>
+        </div>
+      </div>
+      <a href="https://mapmyvisitors.com/web/1bw85" title="Visit tracker"><img src="https://mapmyvisitors.com/map.png?d=GrcOEDG5hcByn62gmG4Z71NKBC4PNQoZ8ZCk7tDhGvs&cl=ffffff"></a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
