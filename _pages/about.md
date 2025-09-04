@@ -61,7 +61,7 @@ My research team secured the fourth place in the objective quality category at t
 
 [Beyond Feature Mapping GAP: Integrating Real HDRTV Priors for Superior SDRTV-to-HDRTV Conversion](https://arxiv.org/abs/2411.10775)
 
-**Kepeng Xu**, Li Xu, Gang He, Zhiqiang Zhang, Wenxin Yu, Shihao Wang, Dajiang Zhou, Yunsong Li.
+Gang He, Kepeng Xu*, Li Xu, Wenxin Yu, Xianyun Wu
 
 
 [**Project**] <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
