@@ -217,6 +217,7 @@ Banding Detection via Adaptive Global Frequency Domain Analysis],  Gang He,**Kep
 
 
 # 🎖 Honors and Awards
+- *2025.10* National Scholarships for PhD Candidates. 
 - *2025.01* Received funding from the 2024 China Association for Science and Technology Young Talent Support Project Doctoral Special Program
 - *2024.09* National Scholarships for PhD Candidates. 
 - *2022.09* National Scholarships for Postgraduate Students. 
