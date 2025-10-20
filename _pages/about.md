@@ -21,6 +21,9 @@ redirect_from:
 Seeking opportunities for Visiting scholar Ph.D -->
 
 # Profile
+
+**I am currently seeking postdoctoral positions related to image/video enhancement, computer vision, or multimodal LLM.**
+
 I am currently pursuing a Ph.D. at Xidian University, focusing on research areas including video image enhancement, high dynamic range video generation, and video compression. 
 
 I am looking for interdisciplinary collaborative research, including but not limited to, **multi-modal perception and understanding**.
@@ -221,7 +224,7 @@ Banding Detection via Adaptive Global Frequency Domain Analysis],  Gang He,**Kep
 - *2019.06* Learning-Based Image Inpainting Runner Award. 
 
 # 📖 Educations
-- *2023.09 - 2027.06(now)*, Ph.D, Xidian University, Xi'an.
+- *2023.09 - 2026.06(now)*, Ph.D, Xidian University, Xi'an.
 - *2020.09 - 2023.06*, Master, Xidian University, Xi'an.
 - *2016.09 - 2020.06*, Information and Computing Science, Southwest University of Science and Technology, Mianyang.
 
