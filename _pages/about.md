@@ -38,6 +38,8 @@ My research team secured the fourth place in the objective quality category at t
 
 
 # 🔥 News
+- *2025.11*: 📝 1 paper accepted by AAAI 2026 Oral 
+- *2025.11*: 📝 1 paper accepted by IEEE Transactions on Geoscience and Remote Sensing 
 - *2025.06*: 📝 1 paper accepted by IEEE Transactions on Geoscience and Remote Sensing 
 - *2025.05*: 📝 3 papers accepted by IJCAI in May 2025
 - *2025.01*: 🎉 Received funding from the 2024 China Association for Science and Technology Young Talent Support Project Doctoral Special Program
