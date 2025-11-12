@@ -60,6 +60,21 @@ My research team secured the fourth place in the objective quality category at t
 
 
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TGRS 25</div><img src='images\nri1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[ NeRI: Implicit Neural Representation for Infrared Small Target Detection]
+
+Shangwei Deng, Qianwen Ma, Shangqi Deng, Ziqian Chen, Ruoqi Lian, Bincheng Li, Anqi Liu, Kepeng Xu, Xiaobo Li, and Haofeng Hu
+
+
+[**Project**] <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+- NeRI introduces a hybrid Transformer-CNN network with implicit neural representations, achieving state-of-the-art infrared small target detection accuracy.
+</div>
+</div>
+
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">AAAI-26(Oral)</div><img src='images\realrep.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
