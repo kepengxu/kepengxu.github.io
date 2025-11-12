@@ -60,7 +60,7 @@ My research team secured the fourth place in the objective quality category at t
 
 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IJCAI-25</div><img src='images\realhdrtvnet.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IJCAI-25</div><img src='images\realrep.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [RealRep: Generalized SDR-to-HDR Conversion via Attribute-Disentangled Representation Learning](https://arxiv.org/abs/2505.07322v3)
