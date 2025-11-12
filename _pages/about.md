@@ -59,6 +59,21 @@ My research team secured the fourth place in the objective quality category at t
 # 📝 Publications 
 
 
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IJCAI-25</div><img src='images\realhdrtvnet.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[RealRep: Generalized SDR-to-HDR Conversion via Attribute-Disentangled Representation Learning](https://arxiv.org/abs/2505.07322v3)
+
+Li Xu, Siqi Wang, **Kepeng Xu📧**, Gang He, Lin Zhang, Weiran Wang, Yu-Wing Tai
+
+
+[**Project**] <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+- A more generalizable real-world SDRTV to HDRTV conversion method via Representation Learning
+</div>
+</div>
+
+
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">IJCAI-25</div><img src='images\realhdrtvnet.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
