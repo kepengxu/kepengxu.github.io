@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealRep: Generalized SDR-to-HDR Conversion via Attribute-Disentangled Representation Learning</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Set Inter font for modern look -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Slate-50 background */
+        }
+        .header-bg {
+            background-color: #1e3a8a; /* AAAI Blue theme (Darker Blue) */
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #2563eb; /* Blue-600 underline */
+            border-radius: 9999px;
+        }
+        /* Make the first column sticky for better readability on horizontal scroll */
+        .sticky-col {
+            position: sticky;
+            left: 0;
+            z-index: 10;
+        }
+        .citation-block {
+            background-color: #f1f5f9;
+            border-left: 4px solid #3b82f6;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="header-bg text-white py-12 shadow-xl">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <!-- Paper Title -->
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-center mb-6 leading-tight tracking-tight">
+                RealRep: Generalized SDR-to-HDR Conversion via Attribute-Disentangled Representation Learning
+            </h1>
+            <!-- Paper Info -->
+            <div class="text-center space-y-3 text-lg font-medium text-gray-200">
+                <div class="flex items-center justify-center gap-3 flex-wrap">
+                    <span class="text-xl font-bold text-white">AAAI 2026</span>
+                    <span class="bg-yellow-400 text-blue-900 px-3 py-1 rounded-full text-sm font-bold shadow-md uppercase tracking-wide">Oral Presentation</span>
+                </div>
+                
+                <p class="text-base sm:text-lg pt-2">
+                    Li Xu¹, Siqi Wang¹, <span class="underline decoration-yellow-400 decoration-2 underline-offset-4">Kepeng Xu</span>¹✉️, Ling Zhang, Gang He¹, Weiran Wang¹, Yu-Wing Tai²
+                </p>
+                <p class="text-sm text-gray-300">
+                    ¹ Xidian University &bull; ² Dartmouth College
+                </p>
+                <p class="text-xs text-gray-400 mt-1">✉️ Corresponding Author</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 max-w-7xl py-12">
+
+        <!-- Links/Resources Section -->
+        <section id="links" class="mb-12 text-center">
+            <h2 class="section-title text-2xl font-bold mb-6 sr-only">Resources</h2>
+            <div class="flex flex-wrap justify-center gap-6">
+                <!-- Paper PDF Link -->
+                <a href="https://arxiv.org/pdf/2505.07322v3" target="_blank" class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-8 rounded-xl transition duration-300 shadow-lg transform hover:scale-105">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    Paper (PDF)
+                </a>
+                <a href="https://github.com/kepengxu/RealRep" target="_blank" class="flex items-center gap-2 bg-gray-900 hover:bg-black text-white font-semibold py-3 px-8 rounded-xl transition duration-300 shadow-lg transform hover:scale-105">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg>
+                    Code (GitHub)
+                </a>
+            </div>
+        </section>
+
+        <!-- Abstract -->
+        <section id="abstract" class="mb-16 p-8 bg-white rounded-2xl shadow-xl border border-gray-100">
+            <h2 class="section-title text-3xl font-bold mb-6 text-slate-800">Abstract</h2>
+            <div class="text-lg leading-relaxed text-gray-700 text-justify">
+                <p>
+                    High-Dynamic-Range Wide-Color-Gamut (HDR-WCG) technology is becoming increasingly widespread, driving a growing need for converting Standard Dynamic Range (SDR) content to HDR. Existing methods primarily rely on fixed tone mapping operators, which struggle to handle the diverse appearances and degradations commonly present in real-world SDR content. To address this limitation, we propose a <strong>generalized SDR-to-HDR framework</strong> that enhances robustness by learning <strong>attribute-disentangled representations</strong>.
+                </p>
+                <p class="mt-4">
+                    Central to our approach is <strong>RealRep</strong>, which explicitly disentangles <strong>luminance</strong> and <strong>chrominance</strong> components to capture intrinsic content variations across different SDR distributions. Furthermore, we design a <strong>Luma-/Chroma-aware negative exemplar generation strategy</strong> that constructs degradation-sensitive contrastive pairs, effectively modeling tone discrepancies across SDR styles. Building on these attribute-level priors, we introduce the <strong>Degradation-Domain Aware Controlled Mapping Network (DDACMNet)</strong>, a lightweight, two-stage framework that performs adaptive hierarchical mapping guided by a <strong>control-aware normalization mechanism</strong>. DDACMNet dynamically modulates the mapping process via degradation-conditioned features, enabling robust adaptation across diverse degradation domains.
+                </p>
+            </div>
+        </section>
+
+        <!-- Methodology -->
+        <section id="method" class="mb-16">
+            <h2 class="section-title text-3xl font-bold mb-8 text-slate-800">Methodology</h2>
+            
+            <!-- Framework Idea -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl mb-8 border border-gray-100">
+                <h3 class="text-xl font-bold text-blue-800 mb-4 flex items-center">
+                    <span class="bg-blue-100 text-blue-800 p-2 rounded-lg mr-3">01</span>
+                    Attribute Disentanglement & Negative Generation
+                </h3>
+                <div class="grid lg:grid-cols-2 gap-10 items-center">
+                    <div class="order-2 lg:order-1">
+                        <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                            SDR images exhibit distinct luminance and chrominance distributions under different degradations. Traditional methods often learn entangled features, leading to poor generalization.
+                        </p>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            As shown in <strong>Figure 1(a)</strong>, RealRep introduces a contrastive multi-view encoder to explicitly separate <strong>luminance</strong> and <strong>chrominance</strong>. We utilize a novel <strong>Luma-/Chroma-aware negative exemplar generation strategy</strong> to construct degradation-sensitive contrastive pairs, forcing the model to learn style-invariant content representations and style-specific attribute representations.
+                        </p>
+                    </div>
+                    <div class="order-1 lg:order-2 p-2 bg-gray-50 rounded-xl border border-gray-200">
+                        <img src="https://kepengxu.github.io/projects/realrep/fig1.jpg" alt="Comparison of Entangled Frameworks vs. Attribute-Disentangled Method" class="w-full h-auto rounded-lg shadow-sm">
+                        <p class="text-center text-sm text-gray-500 mt-2 font-medium">Figure 1(a): Comparison between previous entangled frameworks (top) and our attribute-disentangled method (bottom).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Network Architecture -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                <h3 class="text-xl font-bold text-blue-800 mb-4 flex items-center">
+                    <span class="bg-blue-100 text-blue-800 p-2 rounded-lg mr-3">02</span>
+                    Degradation-Domain Aware Controlled Mapping (DDACMNet)
+                </h3>
+                <div class="space-y-6">
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        To fully leverage the disentangled priors, we design <strong>DDACMNet</strong>. It consists of two key stages:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <li><strong>Dense Controlled Mapping (DCM):</strong> Handles global tone mapping by utilizing global degradation priors for affine transformations.</li>
+                        <li><strong>Sparse Controlled Mapping (SCM):</strong> Handles local detail enhancement, utilizing spatially varying local features for fine-grained adjustment.</li>
+                    </ul>
+                    <div class="p-2 bg-gray-50 rounded-xl border border-gray-200 mt-4">
+                        <img src="https://kepengxu.github.io/projects/realrep/model.jpg" alt="DDACMNet Model Architecture" class="w-full h-auto rounded-lg shadow-sm">
+                        <p class="text-center text-sm text-gray-500 mt-2 font-medium">Figure 2: Overview of the DDACMNet architecture. It consists of multi-view encoders, a fusion module, and a controlled mapping network.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Space Analysis -->
+        <section id="analysis" class="mb-16 bg-slate-50 p-8 rounded-2xl border border-slate-200">
+            <h2 class="section-title text-3xl font-bold mb-6 text-slate-800">Feature Space Analysis</h2>
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+                 <div class="bg-white p-4 rounded-xl shadow-md border border-gray-200">
+                    <img src="https://kepengxu.github.io/projects/realrep/tsne.jpg" onerror="this.src='https://placehold.co/600x400/f1f5f9/475569?text=Insert+Figure+6+(t-SNE)+Here'" alt="t-SNE Feature Visualization" class="w-full h-auto rounded-lg">
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-slate-700 mb-3">Why is RealRep More Robust?</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                        Through t-SNE visualization (Figure 6 in the paper), we can clearly see the advantages of RealRep in constructing the feature space.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        Compared to other methods (e.g., PromptIR) which show chaotic and overlapping feature distributions under unknown degradations, <strong>RealRep generates compact and well-separated feature clusters</strong>. This demonstrates that our disentangled learning strategy successfully separates features of different degradation types, enabling the model to accurately match the closest degradation prior when facing unseen real-world SDR styles, thereby achieving robust conversion.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experimental Results -->
+        <section id="results" class="mb-16">
+            <h2 class="section-title text-3xl font-bold mb-8 text-slate-800">Experiments</h2>
+
+            <!-- Quantitative Results -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl mb-10 border border-gray-100">
+                <h3 class="text-xl font-bold text-gray-700 mb-4">Quantitative Comparison</h3>
+                <div class="overflow-x-auto rounded-lg border border-gray-200">
+                    <table class="min-w-full bg-white text-sm">
+                        <thead class="bg-slate-100 text-slate-700">
+                            <tr>
+                                <th class="p-4 text-left font-bold sticky-col bg-slate-100 border-r border-gray-200 z-10">Methods</th>
+                                <th class="p-4 font-semibold whitespace-nowrap">2390eetf.gm</th>
+                                <th class="p-4 font-semibold whitespace-nowrap">2446a</th>
+                                <th class="p-4 font-semibold whitespace-nowrap">2446c.gm</th>
+                                <th class="p-4 font-semibold whitespace-nowrap">davinci</th>
+                                <th class="p-4 font-semibold whitespace-nowrap">hc_gm</th>
+                                <th class="p-4 font-semibold whitespace-nowrap">ocio2</th>
+                                <th class="p-4 font-semibold whitespace-nowrap">reinhard</th>
+                                <th class="p-4 font-semibold whitespace-nowrap">youtube</th>
+                                <th class="p-4 font-semibold text-blue-700 bg-blue-50">Average</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                             <!-- Rows -->
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 font-medium sticky-col bg-white border-r border-gray-200">HDRTVNet</td>
+                                <td class="p-4 text-gray-600">28.97 / 0.90</td>
+                                <td class="p-4 text-gray-600">23.73 / 0.85</td>
+                                <td class="p-4 text-gray-600">26.05 / 0.86</td>
+                                <td class="p-4 text-gray-600">25.50 / 0.88</td>
+                                <td class="p-4 text-gray-600">26.91 / 0.86</td>
+                                <td class="p-4 text-gray-600">26.46 / 0.87</td>
+                                <td class="p-4 text-gray-600">23.23 / 0.87</td>
+                                <td class="p-4 text-gray-600">25.31 / 0.87</td>
+                                <td class="p-4 font-semibold text-blue-700 bg-blue-50">25.77 / 0.8716</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-4 font-medium sticky-col bg-white border-r border-gray-200">LSNet</td>
+                                <td class="p-4 text-gray-600">33.23 / 0.94</td>
+                                <td class="p-4 text-gray-600">31.18 / 0.91</td>
+                                <td class="p-4 text-gray-600">28.05 / 0.87</td>
+                                <td class="p-4 text-gray-600">25.63 / 0.90</td>
+                                <td class="p-4 text-gray-600">27.34 / 0.87</td>
+                                <td class="p-4 text-gray-600">29.56 / 0.89</td>
+                                <td class="p-4 text-gray-600">25.67 / 0.90</td>
+                                <td class="p-4 text-gray-600">27.01 / 0.90</td>
+                                <td class="p-4 font-semibold text-blue-700 bg-blue-50">28.46 / 0.8979</td>
+                            </tr>
+                             <tr class="bg-blue-50 hover:bg-blue-100 border-2 border-blue-200 shadow-sm">
+                                <td class="p-4 font-bold text-blue-800 sticky-col bg-blue-50 border-r border-blue-200">RealRep (Ours)</td>
+                                <td class="p-4 font-bold text-blue-800">34.13 / 0.95</td>
+                                <td class="p-4 font-bold text-blue-800">34.41 / 0.93</td>
+                                <td class="p-4 font-bold text-blue-800">30.38 / 0.89</td>
+                                <td class="p-4 font-bold text-blue-800">30.05 / 0.93</td>
+                                <td class="p-4 font-bold text-blue-800">30.47 / 0.90</td>
+                                <td class="p-4 font-bold text-blue-800">31.36 / 0.91</td>
+                                <td class="p-4 font-bold text-blue-800">27.59 / 0.93</td>
+                                <td class="p-4 font-bold text-blue-800">30.03 / 0.94</td>
+                                <td class="p-4 font-bold text-blue-800 bg-blue-100">31.05 / 0.9219</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-3 text-sm text-gray-500 text-center">
+                    Note: The table shows PSNR / SSIM results on the HDRTV4K dataset. Our method achieves the best performance across all subsets.
+                </p>
+            </div>
+
+            <!-- Qualitative Results -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                <h3 class="text-xl font-bold text-gray-700 mb-6">Qualitative Results</h3>
+                <div class="p-2 bg-gray-50 rounded-xl border border-gray-200">
+                    <img src="https://kepengxu.github.io/projects/realrep/Qualitative_results.jpg" alt="Visual comparison under unknown degradations" class="w-full h-auto rounded-lg">
+                </div>
+                <p class="text-gray-700 mt-6 text-lg leading-relaxed">
+                    When facing unknown degradations (e.g., complex real-world lighting and tone mapping), RealRep demonstrates superior stability. Compared to methods like LSNet and ICTCPNet, our model not only eliminates artifacts but also accurately recovers highlight details and color saturation, generating visually more natural and vivid HDR images.
+                </p>
+            </div>
+        </section>
+
+        <!-- Citation -->
+        <section id="citation" class="mb-12">
+            <h2 class="section-title text-2xl font-bold mb-6 text-slate-800">Citation</h2>
+            <div class="citation-block p-6 rounded-lg text-sm text-gray-700 overflow-x-auto shadow-inner">
+@inproceedings{xu2026realrep,
+  title={RealRep: Generalized SDR-to-HDR Conversion via Attribute-Disentangled Representation Learning},
+  author={Xu, Li and Wang, Siqi and Xu, Kepeng and Zhang, Ling and He, Gang and Wang, Weiran and Tai, Yu-Wing},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2026}
+}
+            </div>
+        </section>
+
+        <!-- Footer / Contact -->
+        <footer class="bg-slate-900 text-white py-12 rounded-t-3xl">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-blue-400">Contact Us</h3>
+                        <p class="text-gray-400 mb-2">If you have any questions about the code or paper, please contact the corresponding author:</p>
+                        <!-- Email Address -->
+                        <a href="mailto:kepengxu11@gmail.com" class="text-white hover:text-blue-300 transition underline decoration-blue-500 decoration-2 underline-offset-4">
+                            kepengxu11@gmail.com (Kepeng Xu)
+                        </a>
+                    </div>
+                    <div class="text-right md:text-right text-left">
+                        <h3 class="text-xl font-bold mb-4 text-blue-400">Acknowledgements</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed max-w-md ml-auto">
+                            This work was supported in part by the China Postdoctoral Science Foundation (Grant 2025M773501) and the Fundamental Research Funds for the Central Universities (Grant ZYTS25270).
+                        </p>
+                    </div>
+                </div>
+                <div class="border-t border-slate-800 pt-8 text-center text-sm text-gray-500">
+                    <p>&copy; 2026 RealRep Project. AAAI 2026 Oral Presentation.</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+</body>
+</html>
