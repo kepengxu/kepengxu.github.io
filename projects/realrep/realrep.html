@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealRep: Generalized SDR-to-HDR Conversion via Attribute-Disentangled Representation Learning</title>
+    <!-- 加载 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 设定Inter字体，用于现代感 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Slate-50 background */
+        }
+        .header-bg {
+            background-color: #0f172a; /* Slate-900 for header */
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #3b82f6; /* Blue-500 underline */
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- 头部区域 (Header) -->
+    <header class="header-bg text-white py-10 shadow-lg">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <!-- 论文标题 -->
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-center mb-4 leading-tight tracking-tight">
+                RealRep: Generalized SDR-to-HDR Conversion via Attribute-Disentangled Representation Learning
+            </h1>
+            <!-- 论文信息 -->
+            <div class="text-center space-y-2 text-lg font-medium text-gray-300">
+                <p>
+                    <span class="font-bold text-blue-400">CVPR 2026</span> &bull;
+                    <span class="bg-yellow-500 text-slate-900 px-2 py-0.5 rounded-full text-sm font-bold shadow-md">Oral Presentation</span>
+                </p>
+                <p class="text-base sm:text-lg">
+                    Li Xu¹, Siqi Wang¹, Kepeng $Xu^{1+}$, Ling Zhang, Gang He¹, Weiran Wang¹, Yu-Wing Tai²
+                </p>
+                <p class="text-sm italic">
+                    ¹ 西安电子科技大学 (Xidian University) &bull; ² 达特茅斯学院 (Dartmouth College)
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主体内容区域 -->
+    <main class="container mx-auto px-4 max-w-7xl py-12">
+
+        <!-- 链接/资源区 -->
+        <section id="links" class="mb-12 text-center">
+            <h2 class="section-title text-2xl font-bold mb-6 sr-only">资源链接</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-xl transition duration-300 shadow-lg transform hover:scale-105">
+                    <span role="img" aria-label="Paper">📄</span> 论文 (PDF)
+                </a>
+                <a href="#" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-xl transition duration-300 shadow-lg transform hover:scale-105">
+                    <span role="img" aria-label="Code">💻</span> 代码 (GitHub)
+                </a>
+            </div>
+        </section>
+
+        <!-- 摘要 (Abstract) -->
+        <section id="abstract" class="mb-12 p-8 bg-white rounded-2xl shadow-xl">
+            <h2 class="section-title text-3xl font-bold mb-6">摘要 (Abstract)</h2>
+            <p class="text-lg leading-relaxed text-gray-700">
+                高动态范围/宽色域（HDR-WCG）技术正日益普及，对将标准动态范围（SDR）内容转换为HDR的需求不断增长。现有方法主要依赖固定的色调映射算子，难以处理真实世界SDR内容中普遍存在的各种外观和退化。为解决这一限制，我们提出了一个**广义SDR到HDR转换框架**，通过学习**属性解耦表示**来增强鲁棒性。我们的核心方法是**RealRep**，它显式地解耦了**亮度 (Luminance)** 和 **色度 (Chrominance)** 分量，以捕获不同SDR分布下的内在内容变化。此外，我们设计了一种**亮度/色度感知负例生成策略**，有效建模SDR风格间的色调差异。基于这些属性级先验，我们引入了**退化域感知受控映射网络 (DDACMNet)**，这是一个轻量级的两阶段框架，通过**控制感知归一化机制**执行自适应分层映射。DDACMNet通过退化条件特征动态调制映射过程，实现了对各种退化域的鲁棒适应。
+            </p>
+        </section>
+
+        <!-- 核心思想/框架图 -->
+        <section id="method" class="mb-12 p-8 bg-white rounded-2xl shadow-xl">
+            <h2 class="section-title text-3xl font-bold mb-6">核心方法与框架 (Methodology)</h2>
+            <p class="text-lg mb-6 text-gray-700">
+                我们的RealRep框架解决了现有方法在处理多重退化SDR时泛化能力差的问题。关键在于**解耦表示学习**和**退化感知控制**。
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <!-- 图1 (a) - 框架对比 -->
+                <div class="p-4 border border-gray-200 rounded-xl shadow-inner bg-gray-50">
+                    <img src="https://placehold.co/800x450/e0e7ff/1e3a8a?text=Figure+1(a)+-+Attribute+Disentangled+Framework" alt="RealRep 属性解耦框架图示" class="w-full h-auto rounded-lg mb-3">
+                    <p class="text-center text-sm font-medium text-gray-500">
+                        图1(a): 传统方法（上）与我们属性解耦方法（下）的对比。我们显式分离了亮度和色度，并注入到解耦的表示空间中。
+                    </p>
+                </div>
+
+                <!-- 核心组件描述 -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-blue-600">1. 属性解耦表示学习</h3>
+                    <p class="text-gray-700">
+                        我们使用对比多视图编码器，将输入SDR的**亮度**和**色度**特征从**全局**和**局部**视图中分离出来。这有助于模型捕获独立于内容本身的退化信息，构建一个鲁棒的、退化不变的嵌入空间。
+                    </p>
+
+                    <h3 class="text-xl font-bold text-blue-600">2. DDACMNet: 退化域感知受控映射网络</h3>
+                    <p class="text-gray-700">
+                        DDACMNet利用解耦后的先验知识，通过**零初始化控制器**和**控制感知归一化机制**进行自适应映射。它包含**密集受控映射 (DCM)** 和 **稀疏受控映射 (SCM)** 模块，实现从全局色调一致性到局部细节增强的层次化适应。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 主要贡献 (Contributions) -->
+        <section id="contributions" class="mb-12">
+            <h2 class="section-title text-3xl font-bold mb-6">核心贡献 (Key Contributions)</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- 贡献 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-blue-500">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-700">属性解耦表示学习</h3>
+                    <p class="text-gray-600">
+                        我们首次提出了 RealRep 框架，显式解耦亮度和色度，以减少风格变化的影响，并为准确的 SDR-to-HDR 转换构建了一个鲁棒的嵌入空间。
+                    </p>
+                </div>
+                <!-- 贡献 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-green-500">
+                    <h3 class="text-xl font-semibold mb-3 text-green-700">退化受控映射机制</h3>
+                    <p class="text-gray-600">
+                        设计了 DDACMNet，通过零初始化控制器注入解耦先验，并通过两阶段退化引导策略稳定训练，实现了动态和自适应的 HDR 重建。
+                    </p>
+                </div>
+                <!-- 贡献 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-yellow-500">
+                    <h3 class="text-xl font-semibold mb-3 text-yellow-700">卓越的泛化性能</h3>
+                    <p class="text-gray-600">
+                        在具有各种已知和**未知退化**的数据集上进行了广泛实验，证明 RealRep 在视觉质量和泛化能力方面均优于现有最先进的方法。
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 实验结果 (Results) -->
+        <section id="results" class="mb-12 p-8 bg-white rounded-2xl shadow-xl">
+            <h2 class="section-title text-3xl font-bold mb-6">实验结果 (Results)</h2>
+
+            <!-- 定性结果 (Qualitative Results) -->
+            <h3 class="text-2xl font-bold mb-4 text-gray-700">定性结果：未知退化下的优势</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                <div class="p-3 bg-gray-50 rounded-lg shadow-md">
+                    <img src="https://placehold.co/600x400/f0f0f0/333333?text=SDR+Input" alt="SDR输入图像" class="w-full h-auto rounded-md">
+                    <p class="text-center text-sm mt-2 font-medium">输入 SDR (Input)</p>
+                </div>
+                <div class="p-3 bg-gray-50 rounded-lg shadow-md">
+                    <img src="https://placehold.co/600x400/f0f0f0/333333?text=SOTA+Method" alt="SOTA方法结果" class="w-full h-auto rounded-md">
+                    <p class="text-center text-sm mt-2 font-medium">现有 SOTA 方法 (如 LSNet) 结果</p>
+                </div>
+                <div class="p-3 bg-gray-50 rounded-lg shadow-md border-2 border-blue-500">
+                    <img src="https://placehold.co/600x400/e0f2fe/0c4a6e?text=RealRep+(Ours)" alt="RealRep方法结果" class="w-full h-auto rounded-md">
+                    <p class="text-center text-sm mt-2 font-bold text-blue-600">我们的方法 RealRep (Ours)</p>
+                </div>
+            </div>
+            <p class="text-lg leading-relaxed mb-8 text-gray-700">
+                如图所示，现有方法（如LSNet、ICTCPNet）在处理未知退化时，常常出现亮度恢复不准确或色彩饱和度不足的问题。相比之下，我们的 RealRep 方法在复杂退化下，能够显著更好地恢复亮度和色度，产生与 Ground Truth 更接近的感知忠实 HDR 重建。
+            </p>
+
+            <!-- 定量结果 (Quantitative Results) -->
+            <h3 class="text-2xl font-bold mb-4 text-gray-700">定量结果：性能对比</h3>
+            <div class="overflow-x-auto rounded-lg shadow-md">
+                <table class="min-w-full bg-slate-50 border-collapse">
+                    <thead class="bg-blue-600 text-white">
+                        <tr>
+                            <th class="p-3 text-left font-semibold">方法 (Method)</th>
+                            <th class="p-3 font-semibold">PSNR (dB) ↑</th>
+                            <th class="p-3 font-semibold">SSIM ↑</th>
+                            <th class="p-3 font-semibold">HDR-VDP3 ↑</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-200 hover:bg-gray-100">
+                            <td class="p-3 font-medium">HDRTVNet</td>
+                            <td class="p-3">25.77</td>
+                            <td class="p-3">0.8716</td>
+                            <td class="p-3">8.69</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-100 bg-gray-50">
+                            <td class="p-3 font-medium">LSNet</td>
+                            <td class="p-3">28.46</td>
+                            <td class="p-3">0.8979</td>
+                            <td class="p-3">9.19</td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-gray-100">
+                            <td class="p-3 font-medium">PromptIR</td>
+                            <td class="p-3">28.34</td>
+                            <td class="p-3">0.8940</td>
+                            <td class="p-3">9.11</td>
+                        </tr>
+                        <!-- 突出显示我们的结果 -->
+                        <tr class="bg-blue-100 font-bold border-2 border-blue-600">
+                            <td class="p-3 text-blue-800">RealRep (Ours)</td>
+                            <td class="p-3 text-blue-800">31.05</td>
+                            <td class="p-3 text-blue-800">0.9219</td>
+                            <td class="p-3 text-blue-800">9.35</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="mt-4 text-sm text-gray-500 italic">
+                定量结果基于 HDRTV4K (已知退化基准) 和 HDR-VDP3 (感知质量指标) 的平均得分。RealRep 在所有指标上均达到了最先进的性能。
+            </p>
+        </section>
+
+        <!-- 致谢与联系方式 (Acknowledgements & Contact) -->
+        <section id="contact" class="p-8 bg-slate-800 text-white rounded-2xl shadow-xl">
+            <h2 class="section-title text-3xl font-bold mb-6 text-white after:bg-sky-400">致谢与联系 (Contact)</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-3 text-sky-400">联系作者 (Corresponding Author)</h3>
+                    <p class="text-gray-300">
+                        第一作者/通讯作者: Kepeng Xu (<span class="font-mono">kp.xu@xidian.edu.cn</span>)
+                    </p>
+                    <p class="text-gray-300">
+                        如果您对我们的工作有任何疑问或合作意向，请随时通过电子邮件联系我们。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3 text-sky-400">资金支持 (Acknowledgements)</h3>
+                    <p class="text-gray-300">
+                        本研究得到了中国博士后科学基金 (Grant 2025M773501) 和中央高校基本科研业务费 (Grant ZYTS25270) 的部分支持。
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- 底部 (Footer) -->
+    <footer class="bg-slate-900 text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center text-sm text-gray-400">
+            <p>&copy; 2026 RealRep 团队. All rights reserved. | 
+                <span class="font-semibold text-blue-400">CVPR Oral Presentation</span>
+            </p>
+            <p class="mt-2">本网站遵循 CVPR 学术主页风格设计.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
