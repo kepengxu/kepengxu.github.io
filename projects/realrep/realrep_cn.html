@@ -95,10 +95,10 @@
             <h2 class="section-title text-3xl font-bold mb-6 text-slate-800">摘要 (Abstract)</h2>
             <div class="text-lg leading-relaxed text-gray-700 text-justify">
                 <p>
-                    高动态范围/宽色域（HDR-WCG）技术正日益普及，对将标准动态范围（SDR）内容转换为HDR的需求不断增长。现有方法主要依赖固定的色调映射算子，难以处理真实世界SDR内容中普遍存在的各种外观和退化。为解决这一限制，我们提出了一个**广义SDR到HDR转换框架**，通过学习**属性解耦表示**来增强鲁棒性。
+                    高动态范围/宽色域（HDR-WCG）技术正日益普及，对将标准动态范围（SDR）内容转换为HDR的需求不断增长。现有方法主要依赖固定的色调映射算子，难以处理真实世界SDR内容中普遍存在的各种外观和退化。为解决这一限制，我们提出了一个<strong>广义SDR到HDR转换框架</strong>，通过学习<strong>属性解耦表示</strong>来增强鲁棒性。
                 </p>
                 <p class="mt-4">
-                    我们的核心方法是**RealRep**，它显式地解耦了**亮度 (Luminance)** 和 **色度 (Chrominance)** 分量，以捕获不同SDR分布下的内在内容变化。此外，我们设计了一种**亮度/色度感知负例生成策略**，有效建模SDR风格间的色调差异。基于这些属性级先验，我们引入了**退化域感知受控映射网络 (DDACMNet)**，这是一个轻量级的两阶段框架，通过**控制感知归一化机制**执行自适应分层映射。DDACMNet通过退化条件特征动态调制映射过程，实现了对各种退化域的鲁棒适应。
+                    我们的核心方法是<strong>RealRep</strong>，它显式地解耦了<strong>亮度 (Luminance)</strong> 和 <strong>色度 (Chrominance)</strong> 分量，以捕获不同SDR分布下的内在内容变化。此外，我们设计了一种<strong>亮度/色度感知负例生成策略</strong>，有效建模SDR风格间的色调差异。基于这些属性级先验，我们引入了<strong>退化域感知受控映射网络 (DDACMNet)</strong>，这是一个轻量级的两阶段框架，通过<strong>控制感知归一化机制</strong>执行自适应分层映射。DDACMNet通过退化条件特征动态调制映射过程，实现了对各种退化域的鲁棒适应。
                 </p>
             </div>
         </section>
@@ -119,7 +119,7 @@
                             SDR图像在不同退化下表现出截然不同的亮度和色彩分布。传统方法往往学习纠缠的特征，导致泛化性差。
                         </p>
                         <p class="text-gray-700 text-lg leading-relaxed">
-                            如<strong>图1(a)</strong>所示，RealRep 引入了对比多视图编码器，将**亮度**和**色度**显式分离。我们利用一种新颖的<strong>亮度/色度感知负例生成策略</strong>，构建对退化敏感的对比样本对，强制模型学习风格不变的内容表示和风格特异的属性表示。
+                            如<strong>图1(a)</strong>所示，RealRep 引入了对比多视图编码器，将<strong>亮度</strong>和<strong>色度</strong>显式分离。我们利用一种新颖的<strong>亮度/色度感知负例生成策略</strong>，构建对退化敏感的对比样本对，强制模型学习风格不变的内容表示和风格特异的属性表示。
                         </p>
                     </div>
                     <div class="order-1 lg:order-2 p-2 bg-gray-50 rounded-xl border border-gray-200">
@@ -137,7 +137,7 @@
                 </h3>
                 <div class="space-y-6">
                     <p class="text-gray-700 text-lg leading-relaxed">
-                        为了充分利用解耦的先验知识，我们设计了 **DDACMNet**。它包含两个关键阶段：
+                        为了充分利用解耦的先验知识，我们设计了 <strong>DDACMNet</strong>。它包含两个关键阶段：
                     </p>
                     <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
                         <li><strong>密集受控映射 (DCM):</strong> 处理全局色调映射，利用全局退化先验进行仿射变换。</li>
@@ -164,7 +164,7 @@
                         通过 t-SNE 可视化（论文图6），我们可以清晰地看到 RealRep 在特征空间构建上的优势。
                     </p>
                     <p class="text-gray-700 text-lg leading-relaxed">
-                        相比于其他方法（如 PromptIR）在未知退化下的特征分布混乱、重叠，**RealRep 生成的特征簇紧凑且分离度高**。这证明了我们的解耦学习策略成功地将不同退化类型的特征分离开来，使得模型在面对未见过的真实世界 SDR 风格时，能够准确地匹配到最接近的退化先验，从而实现稳健的转换。
+                        相比于其他方法（如 PromptIR）在未知退化下的特征分布混乱、重叠，<strong>RealRep 生成的特征簇紧凑且分离度高</strong>。这证明了我们的解耦学习策略成功地将不同退化类型的特征分离开来，使得模型在面对未见过的真实世界 SDR 风格时，能够准确地匹配到最接近的退化先验，从而实现稳健的转换。
                     </p>
                 </div>
             </div>
