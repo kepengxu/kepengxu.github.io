@@ -61,6 +61,22 @@ My research team secured the fourth place in the objective quality category at t
 # 📝 Publications 
 
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images\BudVLNF1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Nipping the Drift in the Bud: Retrospective Rectification for Robust Vision-Language Navigation](https://arxiv.org/html/2602.06356v1)
+
+Gang He, Zhenyang Liu, Kepeng Xu📧, Li Xu, Tong Qiao, Wenxin Yu, Chang Wu, Weiying Xie
+
+
+[**Project**](https://6zyyy.github.io/BudVLN/#) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+- BudVLN proposes retrospective rectification (via counterfactual re‑anchoring and decision‑conditioned supervision synthesis) to fix instruction–state misalignment in VLN.
+</div>
+</div>
+
+
+
+
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">TGRS 25</div><img src='images\nri1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
