@@ -61,8 +61,17 @@ My research team secured the fourth place in the objective quality category at t
 
 # 📝 Publications 
 
-- `SIGGRAPH 2026` [C^0 Generalized Coons Volumes over Arbitrary Polyhedra]
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">SIGGRAPH 2026</div><img src='projects/gcvolume/static/image/Figure-00.png' alt="gcvolume" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
 
+[C^0 Generalized Coons Volumes over Arbitrary Polyhedra](https://kepengxu.github.io/projects/gcvolume/)
+
+Kaikai Qin, Zeqi Ge, Péter Salvi, Chenhao Ying, Huibiao Wen, **Kepeng Xu**, Shiqing Xin, Chongyang Deng
+
+[**Project**](https://kepengxu.github.io/projects/gcvolume/) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+- A polyhedral generalization of Coons volumes for boundary-surface interpolation, high-order cage-based deformation, and PolyCube-based geometric modeling.
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images\BudVLNF1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
