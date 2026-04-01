@@ -38,6 +38,7 @@ My research team secured the fourth place in the objective quality category at t
 
 
 # 🔥 News
+- *2026.03*: 🎉 1 paper **C^0 Generalized Coons Volumes over Arbitrary Polyhedra** accepted by **SIGGRAPH 2026**
 - *2025.11*: 📝 1 paper accepted by AAAI 2026 Oral 
 - *2025.11*: 📝 1 paper accepted by IEEE Transactions on Geoscience and Remote Sensing 
 - *2025.06*: 📝 1 paper accepted by IEEE Transactions on Geoscience and Remote Sensing 
@@ -59,6 +60,8 @@ My research team secured the fourth place in the objective quality category at t
 - *2022.02*: I release a modern and responsive academic personal [homepage template](https://github.com/RayeRen/acad-homepage.github.io). Welcome to STAR and FORK! -->
 
 # 📝 Publications 
+
+- `SIGGRAPH 2026` [C^0 Generalized Coons Volumes over Arbitrary Polyhedra]
 
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images\BudVLNF1.png' alt="sym" width="100%"></div></div>
