@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Project page for C⁰ Generalized Coons Volumes over Arbitrary Polyhedra.">
+  <meta name="keywords" content="Geometric Modeling, Transfinite Interpolation, Coons Volume, Polyhedra, Computer Graphics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C⁰ Generalized Coons Volumes over Arbitrary Polyhedra</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/image/sa26-logo.png" type="image/png">
+</head>
+<body>
+  <div class="page-shell">
+    <section class="hero hero-publication">
+      <div class="hero-body">
+        <div class="container shell-width">
+          <div class="eyebrow-row fade-up delay-1">
+            <span class="eyebrow-tag eyebrow-tag-logo-only">
+              <img src="./static/image/siggraph-2026.png" alt="SIGGRAPH 2026 logo" class="eyebrow-tag-logo eyebrow-tag-logo-wide">
+            </span>
+          </div>
+
+          <div class="columns is-variable is-8 is-vcentered hero-grid">
+            <div class="column is-9-desktop is-12-tablet">
+              <div class="fade-up delay-2">
+                <h1 class="publication-title">C⁰ Generalized Coons Volumes over Arbitrary Polyhedra</h1>
+                <p class="publication-subtitle">A polyhedral generalization of Coons volumes for boundary-surface interpolation, high-order cage-based deformation, and PolyCube-based geometric modeling.</p>
+              </div>
+
+              <div class="publication-authors fade-up delay-3">
+                <span class="author-block">Kaikai Qin<sup>1,†</sup></span>
+                <span class="author-block">Zeqi Ge<sup>1,†</sup></span>
+                <span class="author-block">Péter Salvi<sup>2</sup></span>
+                <span class="author-block">Chenhao Ying<sup>1</sup></span>
+                <span class="author-block">Huibiao Wen<sup>3</sup></span>
+                <span class="author-block">Kepeng Xu<sup>4</sup></span>
+                <span class="author-block">Shiqing Xin<sup>3</sup></span>
+                <span class="author-block">Chongyang Deng<sup>1,*</sup></span>
+              </div>
+
+              <div class="publication-affiliations fade-up delay-4">
+                <div> <sup>1</sup>Hangzhou Dianzi University</div>
+                <div> <sup>2</sup>Budapest University of Technology and Economics</div>
+                <div> <sup>3</sup>Shandong University</div>
+                <div> <sup>4</sup>Xidian University</div>
+              </div>
+
+              <div class="publication-notes fade-up delay-4">
+                <span>† co-first authors</span>
+                <span>* corresponding author</span>
+              </div>
+
+              <div class="affiliation-logos fade-up delay-4">
+                <div class="affiliation-logo-card"><img src="./static/image/HDLOGO.png" alt="Hangzhou Dianzi University logo"></div>
+                <div class="affiliation-logo-card"><img src="./static/image/BMELOGO.png" alt="Budapest University of Technology and Economics logo"></div>
+                <div class="affiliation-logo-card"><img src="./static/image/SDULOGO.png" alt="Shandong University logo"></div>
+                <div class="affiliation-logo-card"><img src="./static/image/XDLOGO.png" alt="Xidian University logo"></div>
+              </div>
+
+              <div class="publication-links fade-up delay-5">
+                <span class="link-block">
+                  <a class="external-link button paper-button is-medium" href="#citation">
+                    <span class="icon"><i class="fas fa-file-alt"></i></span>
+                    <span>Paper Coming Soon</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a class="external-link button ghost-button is-medium" href="#gallery">
+                    <span class="icon"><i class="fas fa-images"></i></span>
+                    <span>Gallery</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a class="external-link button ghost-button is-medium" href="#citation">
+                    <span class="icon"><i class="ai ai-arxiv"></i></span>
+                    <span>BibTeX</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+            <div class="column is-3-desktop is-12-tablet fade-up delay-5"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container shell-width">
+        <div class="section-heading fade-up">
+          <span class="section-index">01</span>
+          <div>
+            <h2 class="section-title">Teaser</h2>
+            <p class="section-lead">From sphere interpolation to high-order cage-based deformation, the generalized Coons volume extends transfinite interpolation beyond hexahedral topology.</p>
+          </div>
+        </div>
+
+        <figure class="figure-card teaser-card fade-up delay-2">
+          <img src="./static/image/Figure-00.png" alt="Teaser figure for generalized Coons volumes">
+          <figcaption>
+            The left example shows sphere interpolation where boundary surfaces are prescribed over polyhedral domains. The right example shows 3D high-order cage-based deformation, where face-based control provides more expressive and stable deformation than curve-only formulations.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container shell-width narrow-width">
+        <div class="section-heading fade-up">
+          <span class="section-index">02</span>
+          <div>
+            <h2 class="section-title">Abstract</h2>
+          </div>
+        </div>
+
+        <div class="text-panel fade-up delay-2">
+          <p>
+            Transfinite interpolation is a fundamental theme in geometric modeling. The most well-known transfinite interpolation volume is the Coons volume. However, the topology of Coons volumes is restricted to hexahedra, which significantly limits their applications. In this paper, we generalize the Coons volume from hexahedral topology to arbitrary polyhedral topologies via generalized barycentric coordinates. We prove that the proposed generalized Coons volume possesses several desirable geometric properties and demonstrate its applications in computer graphics.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container shell-width">
+        <div class="section-heading fade-up">
+          <span class="section-index">03</span>
+          <div>
+            <h2 class="section-title">Key Contributions</h2>
+            <p class="section-lead">A concise view of what this work adds to classical Coons constructions.</p>
+          </div>
+        </div>
+
+        <div class="columns is-variable is-6 contribution-grid">
+          <div class="column fade-up delay-1">
+            <article class="info-card">
+              <span class="info-number">01</span>
+              <h3>Generalization beyond hexahedra</h3>
+              <p>The method extends Coons volumes from cube-like topology to arbitrary polyhedral domains, greatly broadening the geometric settings in which transfinite volumetric interpolation can be used.</p>
+            </article>
+          </div>
+          <div class="column fade-up delay-2">
+            <article class="info-card">
+              <span class="info-number">02</span>
+              <h3>Boundary-surface interpolation</h3>
+              <p>Instead of being restricted to boundary curves, the construction interpolates full boundary surfaces, enabling richer control and stronger geometric fidelity at the boundary.</p>
+            </article>
+          </div>
+          <div class="column fade-up delay-3">
+            <article class="info-card">
+              <span class="info-number">03</span>
+              <h3>Graphics applications</h3>
+              <p>The paper demonstrates practical value in sphere interpolation, 3D high-order cage-based deformation, and interpolation over PolyCubes.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container shell-width">
+        <div class="section-heading fade-up">
+          <span class="section-index">04</span>
+          <div>
+            <h2 class="section-title">Method Overview</h2>
+            <p class="section-lead">The construction combines generalized barycentric coordinates with a surface-based Boolean-sum formulation to define C⁰ generalized Coons volumes over arbitrary polyhedra.</p>
+          </div>
+        </div>
+
+        <div class="overview-grid">
+          <figure class="figure-card method-figure-card fade-up delay-1">
+            <div class="method-figure-frame">
+              <img src="./static/image/Figure-09.png" alt="Method construction figure">
+            </div>
+            <figcaption>Surface-based Boolean-sum construction of the proposed C⁰ generalized Coons volume over an arbitrary polyhedral domain.</figcaption>
+          </figure>
+
+          <div class="method-text-grid fade-up delay-2">
+            <div class="text-panel compact-panel">
+              <h3>Core idea</h3>
+              <p>Use non-negative generalized barycentric coordinates as parameters, and blend boundary surface information in a way that preserves key interpolation properties while reducing to classical cases when the domain specializes.</p>
+            </div>
+            <div class="text-panel compact-panel">
+              <h3>Geometric properties</h3>
+              <p>The paper proves interpolation, reduction to the hexahedral Coons volume, reduction to the earlier C⁰ generalized Coons patch in the appropriate setting, and generalized barycentric reproduction.</p>
+            </div>
+            <div class="text-panel compact-panel">
+              <h3>Why it matters</h3>
+              <p>By moving from edge-only to face-aware interpolation on polyhedral domains, the formulation supports more expressive geometric modeling and stronger control in downstream graphics tasks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container shell-width">
+        <div class="section-heading fade-up">
+          <span class="section-index">05</span>
+          <div>
+            <h2 class="section-title">Applications & Results</h2>
+            <p class="section-lead">The paper evaluates the construction in several representative geometric modeling scenarios.</p>
+          </div>
+        </div>
+
+        <div class="result-stack">
+          <article class="result-card fade-up delay-1">
+            <div class="columns is-variable is-6 is-vcentered">
+              <div class="column is-6-desktop">
+                <figure class="figure-card embedded-card">
+                  <img src="./static/image/Figure-13.png" alt="Sphere interpolation results">
+                </figure>
+              </div>
+              <div class="column is-6-desktop">
+                <span class="result-tag">Application I</span>
+                <h3>Sphere interpolation over Platonic solids</h3>
+                <p>The proposed volume accurately represents spherical solids by interpolating boundary surfaces over several polyhedral domains. Compared with curve-only generalized Coons patches, the volume formulation captures the prescribed boundary surfaces directly.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="result-card fade-up delay-2">
+            <div class="columns is-variable is-6 is-vcentered">
+              <div class="column is-6-desktop order-last-mobile">
+                <span class="result-tag">Application II</span>
+                <h3>3D high-order cage-based deformation</h3>
+                <p>Because the generalized Coons volume supports face-based control rather than edge-only control, it enables higher-order deformations with fewer distortions, fewer extrusion artifacts, and more stable alignment to the control cage.</p>
+              </div>
+              <div class="column is-6-desktop">
+                <figure class="figure-card embedded-card application-ii-figure">
+                  <img src="./static/image/Figure-12.png" alt="High-order cage-based deformation results">
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="result-card fade-up delay-3">
+            <div class="columns is-variable is-6 is-vcentered">
+              <div class="column is-6-desktop">
+                <figure class="figure-card embedded-card">
+                  <img src="./static/image/Figure-17.png" alt="PolyCube interpolation results">
+                </figure>
+              </div>
+              <div class="column is-6-desktop">
+                <span class="result-tag">Application III</span>
+                <h3>Interpolation over PolyCubes</h3>
+                <p>By treating an input triangle mesh as boundary surface data and a corresponding PolyCube as the parameter domain, the method constructs interpolating volumes even for complex polyhedral topologies, including concave cases and domains with holes.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container shell-width">
+        <div class="section-heading fade-up">
+          <span class="section-index">06</span>
+          <div>
+            <h2 class="section-title">Figure Gallery</h2>
+            <p class="section-lead">Selected visual results from the paper.</p>
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="figure-card gallery-card fade-up delay-1">
+            <img src="./static/image/Figure-14.png" alt="Comparison figure one">
+            <figcaption>Comparison against the C⁰ generalized Coons patch in deformation settings.</figcaption>
+          </figure>
+          <figure class="figure-card gallery-card fade-up delay-2">
+            <img src="./static/image/Figure-15.png" alt="Comparison figure two">
+            <figcaption>Tri cage versus triquad cage under high-order deformation.</figcaption>
+          </figure>
+          <figure class="figure-card gallery-card fade-up delay-3">
+            <img src="./static/image/Figure-16-armchair.png" alt="Armchair result">
+            <figcaption>Representative deformation result: armchair.</figcaption>
+          </figure>
+          <figure class="figure-card gallery-card fade-up delay-4">
+            <img src="./static/image/Figure-16-bunny.png" alt="Bunny result">
+            <figcaption>Representative deformation result: bunny.</figcaption>
+          </figure>
+          <figure class="figure-card gallery-card fade-up delay-5">
+            <img src="./static/image/Figure-16-moai.png" alt="Moai result">
+            <figcaption>Representative deformation result: moai.</figcaption>
+          </figure>
+          <figure class="figure-card gallery-card fade-up delay-6">
+            <img src="./static/image/Figure-13.png" alt="Sphere interpolation gallery figure">
+            <figcaption>Boundary-surface interpolation over Platonic-solid domains.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="citation">
+      <div class="container shell-width narrow-width">
+        <div class="section-heading fade-up">
+          <span class="section-index">07</span>
+          <div>
+            <h2 class="section-title">Citation</h2>
+            <p class="section-lead">The final BibTeX entry can be updated once the official publication metadata is available.</p>
+          </div>
+        </div>
+
+        <div class="citation-panel fade-up delay-2">
+<pre><code>@article{qin2026gcvolume,
+  title   = {C⁰ Generalized Coons Volumes over Arbitrary Polyhedra},
+  author  = {Kaikai Qin and Zeqi Ge and Péter Salvi and Chenhao Ying and
+             Huibiao Wen and Kepeng Xu and Shiqing Xin and Chongyang Deng},
+  journal = {To appear},
+  year    = {2026}
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer publication-footer">
+      <div class="content has-text-centered">
+        <p>Designed as a static academic project page for the paper <em>C⁰ Generalized Coons Volumes over Arbitrary Polyhedra</em>.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
