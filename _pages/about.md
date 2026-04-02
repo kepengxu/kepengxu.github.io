@@ -61,7 +61,7 @@ My research team secured the fourth place in the objective quality category at t
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">SIGGRAPH 2026</div><img src='projects/gcvolume/static/image/Figure-00.png' alt="gcvolume" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">SIGGRAPH 2026</div><img src='images\gcv.jpg' alt="gcvolume" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [C^0 Generalized Coons Volumes over Arbitrary Polyhedra](https://kepengxu.github.io/projects/gcvolume/)
