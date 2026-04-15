@@ -69,7 +69,7 @@ My research team secured the fourth place in the objective quality category at t
 Kaikai Qin, Zeqi Ge, Péter Salvi, Chenhao Ying, Huibiao Wen, **Kepeng Xu**, Shiqing Xin, Chongyang Deng
 
 [**Project**](https://kepengxu.github.io/projects/gcvolume/) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- A polyhedral generalization of Coons volumes.
+- A polyhedral generalization of Coons volumes for boundary-surface interpolation, high-order cage-based deformation, and PolyCube-based geometric modeling.
 </div>
 </div>
 
