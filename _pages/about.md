@@ -38,6 +38,7 @@ My research team secured the fourth place in the objective quality category at t
 
 
 # 🔥 News
+- *2026.05*: Released the project page for **Allegory of the Cave: Measurement-Grounded Vision-Language Learning**.
 - *2026.03*: 🎉 1 paper **C^0 Generalized Coons Volumes over Arbitrary Polyhedra** accepted by **SIGGRAPH 2026**
 - *2025.11*: 📝 1 paper accepted by AAAI 2026 Oral 
 - *2025.11*: 📝 1 paper accepted by IEEE Transactions on Geoscience and Remote Sensing 
@@ -70,6 +71,18 @@ Kaikai Qin, Zeqi Ge, Péter Salvi, Chenhao Ying, Huibiao Wen, **Kepeng Xu**, Shi
 
 [**Project**](https://kepengxu.github.io/projects/gcvolume/) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 - A polyhedral generalization of Coons volumes for boundary-surface interpolation, high-order cage-based deformation, and PolyCube-based geometric modeling.
+</div>
+</div>
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Preprint 2026</div><img src='images/prism-vl.png' alt="PRISM-VL" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Allegory of the Cave: Measurement-Grounded Vision-Language Learning](https://kepengxu.github.io/projects/prism-vl/)
+
+**Kepeng Xu**, Li Xu, Gang He, Wenxin Yu
+
+[**Project**](https://kepengxu.github.io/projects/prism-vl/) / [**PDF**](https://kepengxu.github.io/projects/prism-vl/prism-vl.pdf) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+- PRISM-VL studies measurement-grounded VLM learning with RAW-derived Meas.-XYZ inputs, camera-conditioned grounding, and exposure-bracketed supervision transfer.
 </div>
 </div>
 
