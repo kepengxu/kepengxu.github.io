@@ -81,7 +81,7 @@ Kaikai Qin, Zeqi Ge, Péter Salvi, Chenhao Ying, Huibiao Wen, **Kepeng Xu**, Shi
 
 **Kepeng Xu**, Li Xu, Gang He, Wenxin Yu
 
-[**Project**](https://kepengxu.github.io/projects/prism-vl/) / [**PDF**](https://kepengxu.github.io/projects/prism-vl/prism-vl.pdf) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+[**Project**](https://kepengxu.github.io/projects/prism-vl/) / [**PDF**](https://kepengxu.github.io/projects/prism-vl/prism-vl.pdf) / [**GitHub**](https://github.com/kepengxu/PRISM-VL) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 - PRISM-VL studies measurement-grounded VLM learning with RAW-derived Meas.-XYZ inputs, camera-conditioned grounding, and exposure-bracketed supervision transfer.
 </div>
 </div>
