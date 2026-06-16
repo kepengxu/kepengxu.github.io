@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeCoMix-HDR: Degradation-aware Contrastive Mining and Mixing</title>
+  <meta name="description" content="Project page for DeCoMix-HDR, a degradation-aware contrastive mining and mixing framework for generalized SDR-to-HDR conversion." />
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --panel: #ffffff;
+      --ink: #141821;
+      --muted: #5f6878;
+      --line: #e5e9f1;
+      --blue: #2563eb;
+      --blue-dark: #1e3a8a;
+      --cyan: #0891b2;
+      --green: #059669;
+      --red: #dc2626;
+      --shadow: 0 18px 45px rgba(17, 24, 39, 0.08);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .wrap {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 0 52px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(125, 211, 252, 0.26), transparent 30%),
+        radial-gradient(circle at 82% 18%, rgba(96, 165, 250, 0.26), transparent 26%),
+        linear-gradient(135deg, #0f172a 0%, #1e3a8a 58%, #0e7490 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -42% -10%;
+      height: 70%;
+      background: rgba(255, 255, 255, 0.08);
+      transform: rotate(-4deg);
+    }
+
+    .hero-content { position: relative; z-index: 1; text-align: center; }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 13px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      color: #dbeafe;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      backdrop-filter: blur(12px);
+    }
+
+    h1 {
+      max-width: 980px;
+      margin: 24px auto 18px;
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.03;
+      letter-spacing: -0.055em;
+    }
+
+    .subtitle {
+      max-width: 850px;
+      margin: 0 auto;
+      color: #dbeafe;
+      font-size: clamp(17px, 2.2vw, 22px);
+    }
+
+    .authors {
+      max-width: 900px;
+      margin: 28px auto 0;
+      color: #e0f2fe;
+      font-size: 16px;
+    }
+
+    .affiliations {
+      margin-top: 8px;
+      color: #bfdbfe;
+      font-size: 14px;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      border-radius: 999px;
+      font-weight: 800;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 18px 36px rgba(15, 23, 42, 0.22); }
+    .btn-primary { background: #fff; color: #0f172a; }
+    .btn-secondary { background: rgba(255, 255, 255, 0.14); color: #fff; border: 1px solid rgba(255, 255, 255, 0.28); }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(247, 248, 251, 0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav .wrap {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 12px 0;
+    }
+
+    nav a {
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    nav a:hover { color: var(--blue); background: #eaf1ff; }
+
+    main { padding: 46px 0 72px; }
+
+    section { margin-bottom: 34px; }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(24px, 4vw, 38px);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(26px, 3vw, 36px);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    .kicker {
+      margin: 0 0 8px;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      align-items: center;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .split-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+      gap: 28px;
+      align-items: center;
+      margin-top: 26px;
+    }
+
+    .split-row.reverse {
+      grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
+    }
+
+    .text-panel {
+      padding: 8px 4px;
+    }
+
+    .text-panel h3 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+    }
+
+    .text-panel p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .bullet-list {
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .bullet-list li {
+      position: relative;
+      margin: 10px 0;
+      padding-left: 20px;
+      color: #334155;
+    }
+
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--blue);
+    }
+
+    .figure-link {
+      display: inline-flex;
+      margin-top: 10px;
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .mini-card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: linear-gradient(180deg, #fff, #fbfdff);
+    }
+
+    .mini-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #0f172a;
+      font-size: 17px;
+    }
+
+    .mini-card p { margin: 0; color: var(--muted); }
+
+    .metric {
+      padding: 22px;
+      border-radius: 20px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .metric .value {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--blue-dark);
+      font-size: 32px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
+
+    .metric .label { color: var(--muted); font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; }
+
+    figure { margin: 0; }
+
+    .figure-box {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #f8fafc;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+    }
+
+    figcaption {
+      padding: 10px 6px 2px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .abstract {
+      color: #364152;
+      font-size: 17px;
+      text-align: justify;
+    }
+
+    .highlight {
+      color: #0f172a;
+      font-weight: 850;
+    }
+
+    .method-flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .step {
+      position: relative;
+      padding: 20px;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .step span {
+      display: inline-flex;
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      background: #dbeafe;
+      color: var(--blue-dark);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .step h3 { margin: 0 0 8px; font-size: 16px; }
+    .step p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    pre {
+      overflow-x: auto;
+      margin: 0;
+      padding: 22px;
+      color: #dbeafe;
+      background: #0f172a;
+      border-radius: 18px;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    footer {
+      padding: 34px 0;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--line);
+      background: #fff;
+    }
+
+    @media (max-width: 860px) {
+      .grid-2, .grid-3, .method-flow, .split-row, .split-row.reverse { grid-template-columns: 1fr; }
+      .split-row.reverse .text-panel { order: 2; }
+      .split-row.reverse figure { order: 1; }
+      .section-head { display: block; }
+      .hero { padding-top: 54px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-content">
+      <div class="tag">Journal Manuscript · SDR-to-HDR Conversion</div>
+      <h1>DeCoMix-HDR</h1>
+      <p class="subtitle">Degradation-aware Contrastive Mining and Mixing for Generalized SDR-to-HDR Conversion</p>
+      <div class="authors">
+        Kepeng Xu, Jialin Wu, Siqi Wang, Li Xu, Chang Wu, Gang He, Wenxin Yu, Yunsong Li, Yu-Wing Tai
+        <div class="affiliations">Xidian University · Southwest University of Science and Technology · Dartmouth College</div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://github.com/kepengxu/RealRep" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="wrap">
+      <a href="#abstract">Abstract</a>
+      <a href="#motivation">Motivation</a>
+      <a href="#method">Method</a>
+      <a href="#feature-space">Representation</a>
+      <a href="#results">Results</a>
+      <a href="#ablation">Ablation</a>
+      <a href="#runtime">Runtime</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section id="teaser" class="card">
+      <figure class="figure-box">
+        <img src="assets/teaser.png" alt="Motivation of DeCoMix-HDR degradation representation" />
+        <figcaption>Motivation of our degradation representation. Luminance and chrominance degradation statistics are coupled but not identical, motivating attribute-aware SDR degradation modeling.</figcaption>
+      </figure>
+    </section>
+
+    <section id="abstract" class="card">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Abstract</p>
+          <h2>Generalized HDR reconstruction under diverse SDR styles</h2>
+        </div>
+      </div>
+      <div class="abstract">
+        <p>
+          High-Dynamic-Range Wide-Color-Gamut technology is becoming increasingly widespread, driving a growing need for converting Standard Dynamic Range content to HDR. Existing methods primarily rely on fixed tone mapping operators, which struggle to handle the diverse appearances and degradations commonly present in real-world SDR content.
+        </p>
+        <p>
+          We propose <span class="highlight">DeCoMix-HDR</span>, a generalized SDR-to-HDR framework that learns <span class="highlight">attribute-disentangled degradation representations</span> to improve robustness across diverse SDR styles. DeCoMix-HDR introduces luma-/chroma-aware negative mining to select informative semi-hard negatives according to attribute-level degradation differences, and further performs rank-guided representation mixing to synthesize harder negatives near the contrastive decision boundary. The learned degradation representations guide a lightweight degradation-adaptive HDR mapping network for robust SDR-to-HDR reconstruction.
+        </p>
+      </div>
+    </section>
+
+    <section id="motivation" class="card">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Motivation</p>
+          <h2>Luminance and chrominance degradations are coupled but not identical</h2>
+        </div>
+      </div>
+      <div class="grid-3">
+        <div class="mini-card">
+          <strong>Real SDR styles are diverse</strong>
+          <p>Fixed tone-mapping assumptions fail to cover the broad appearance variations of real-world SDR content.</p>
+        </div>
+        <div class="mini-card">
+          <strong>Attributes are asymmetric</strong>
+          <p>Luminance and chrominance statistics vary together, but their degradation-wise trends differ.</p>
+        </div>
+        <div class="mini-card">
+          <strong>Entangled priors limit generalization</strong>
+          <p>A single degradation factor cannot capture attribute-specific responses needed for robust HDR recovery.</p>
+        </div>
+      </div>
+      <figure class="figure-box" style="margin-top: 24px;">
+        <img src="assets/representation.png" alt="Comparison with entangled degradation representation" />
+        <figcaption>DeCoMix-HDR learns a more separated degradation representation space than entangled degradation modeling.</figcaption>
+      </figure>
+    </section>
+
+    <section id="method" class="card">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Method</p>
+          <h2>Contrastive mining and representation mixing for degradation-aware HDR mapping</h2>
+        </div>
+      </div>
+      <figure class="figure-box">
+        <img src="assets/framework.png" alt="Overview of the DeCoMix-HDR framework" />
+        <figcaption>Overall framework. The training-only contrastive branch is discarded at inference, leaving a single-pass encoder and HDR mapping network.</figcaption>
+      </figure>
+      <div class="method-flow">
+        <div class="step">
+          <span>01</span>
+          <h3>Attribute Encoding</h3>
+          <p>A UNet-based encoder extracts global and local degradation descriptors from the SDR input.</p>
+        </div>
+        <div class="step">
+          <span>02</span>
+          <h3>Luma/Chroma Mining</h3>
+          <p>Semi-hard negatives are selected using attribute-aware luminance and chrominance degradation differences.</p>
+        </div>
+        <div class="step">
+          <span>03</span>
+          <h3>Rank-guided Mixing</h3>
+          <p>Mined negatives are interpolated in representation space to densify supervision near the boundary.</p>
+        </div>
+        <div class="step">
+          <span>04</span>
+          <h3>HDR Reconstruction</h3>
+          <p>The learned degradation representation guides lightweight adaptive SDR-to-HDR mapping.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="feature-space" class="card">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Representation Analysis</p>
+          <h2>Structured feature space for known and unknown degradations</h2>
+        </div>
+      </div>
+      <div class="split-row">
+        <figure class="figure-box">
+          <a href="assets/feature_tsne.png" target="_blank"><img src="assets/feature_tsne.png" alt="t-SNE visualization of PromptIR and DeCoMix-HDR features" /></a>
+          <figcaption>t-SNE visualization. DeCoMix-HDR forms more compact and better separated degradation clusters than PromptIR.</figcaption>
+        </figure>
+        <div class="text-panel">
+          <h3>Disentangled degradation representations improve separation</h3>
+          <p>Compared with prompt-based restoration features, DeCoMix-HDR yields a more organized embedding space, where known and unknown degradation styles are more clearly distinguished.</p>
+          <ul class="bullet-list">
+            <li>Unknown degradations are less scattered in the learned representation space.</li>
+            <li>Attribute-aware contrastive supervision improves cluster compactness.</li>
+            <li>The representation structure supports robust degradation-adaptive HDR mapping.</li>
+          </ul>
+          <a class="figure-link" href="assets/feature_tsne.png" target="_blank">View full-resolution figure</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="card">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Visual Results</p>
+          <h2>Robust reconstruction across diverse SDR degradations</h2>
+        </div>
+      </div>
+
+      <div class="split-row">
+        <figure class="figure-box">
+          <a href="assets/qualitative_known.png" target="_blank"><img src="assets/qualitative_known.png" alt="Qualitative comparison on HDRTV4K known degradations" /></a>
+          <figcaption>Visual comparison on diverse HDRTV4K SDR styles.</figcaption>
+        </figure>
+        <div class="text-panel">
+          <h3>Cleaner highlights and more faithful color expansion</h3>
+          <p>Across known degradation types, DeCoMix-HDR produces more stable HDR/WCG outputs with smoother luminance transitions, fewer artifacts around highlight boundaries, and more natural color rendering.</p>
+          <ul class="bullet-list">
+            <li>Reduced over-exposure and banding in high-luminance regions.</li>
+            <li>More consistent chrominance recovery under different SDR styles.</li>
+            <li>Outputs remain visually closer to the HDR reference.</li>
+          </ul>
+          <a class="figure-link" href="assets/qualitative_known.png" target="_blank">View full-resolution figure</a>
+        </div>
+      </div>
+
+      <div class="split-row reverse">
+        <div class="text-panel">
+          <h3>Better generalization to unseen SDR distributions</h3>
+          <p>For unknown degradation settings, fixed tone-mapping based methods often produce desaturated colors or unstable local contrast. The learned degradation representation allows DeCoMix-HDR to adapt to unseen SDR appearances more reliably.</p>
+          <ul class="bullet-list">
+            <li>Maintains local structures under challenging SDR styles.</li>
+            <li>Improves color vividness without introducing severe artifacts.</li>
+            <li>Generalizes better beyond training degradation distributions.</li>
+          </ul>
+          <a class="figure-link" href="assets/qualitative_unknown.png" target="_blank">View full-resolution figure</a>
+        </div>
+        <figure class="figure-box">
+          <a href="assets/qualitative_unknown.png" target="_blank"><img src="assets/qualitative_unknown.png" alt="Qualitative comparison on unknown SDR degradation" /></a>
+          <figcaption>Additional qualitative comparison under challenging SDR degradations.</figcaption>
+        </figure>
+      </div>
+
+      <div class="split-row">
+        <figure class="figure-box">
+          <a href="assets/qualitative_more.png" target="_blank"><img src="assets/qualitative_more.png" alt="More qualitative SDR-to-HDR examples" /></a>
+          <figcaption>More visual examples showing HDR reconstruction quality.</figcaption>
+        </figure>
+        <div class="text-panel">
+          <h3>Consistent perceptual improvements across scenes</h3>
+          <p>The visual comparisons show that DeCoMix-HDR improves both global tone reproduction and local detail recovery. The gains are especially visible in sky, water, highlight, and saturated color regions.</p>
+          <a class="figure-link" href="assets/qualitative_more.png" target="_blank">View full-resolution figure</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="ablation" class="card">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Ablation Visualization</p>
+          <h2>Each contrastive component improves visual stability</h2>
+        </div>
+      </div>
+      <div class="split-row reverse">
+        <div class="text-panel">
+          <h3>Mining and mixing jointly improve reconstruction</h3>
+          <p>The ablation results compare variants without contrastive learning, with random negatives, and without rank-guided representation mixing. The full DeCoMix-HDR model produces clearer highlight structures, reduced noise in smooth regions, and more faithful color transitions.</p>
+          <ul class="bullet-list">
+            <li>Luma-/chroma-aware mining provides stronger attribute-level supervision.</li>
+            <li>Rank-guided representation mixing synthesizes harder boundary negatives.</li>
+            <li>The full model delivers the most stable HDR/WCG reconstruction.</li>
+          </ul>
+          <a class="figure-link" href="assets/ablation_visual.png" target="_blank">View full-resolution figure</a>
+        </div>
+        <figure class="figure-box">
+          <a href="assets/ablation_visual.png" target="_blank"><img src="assets/ablation_visual.png" alt="Subjective ablation comparison" /></a>
+          <figcaption>Subjective ablation comparison of contrastive representation learning components.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="runtime" class="card">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Efficiency</p>
+          <h2>High-quality real-time SDR-to-HDR conversion</h2>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div>
+          <p class="lead">
+            DeCoMix-HDR contains only 1.209M parameters and reaches 35.56 FPS at 512×512 resolution. It is the only compared method located in the high-quality real-time region, achieving over 30 dB PSNR while satisfying the 30 FPS threshold.
+          </p>
+          <div class="grid-3" style="margin-top: 22px;">
+            <div class="metric"><span class="value">31.20</span><span class="label">Avg. PSNR</span></div>
+            <div class="metric"><span class="value">35.56</span><span class="label">FPS @ 512²</span></div>
+            <div class="metric"><span class="value">1.209M</span><span class="label">Parameters</span></div>
+          </div>
+        </div>
+        <figure class="figure-box">
+          <img src="assets/runtime_psnr.png" alt="Runtime and PSNR comparison" />
+          <figcaption>Runtime--quality comparison at 512×512 resolution. Marker size indicates parameter count.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© DeCoMix-HDR Project Page. Built for academic presentation.</div>
+  </footer>
+</body>
+</html>
