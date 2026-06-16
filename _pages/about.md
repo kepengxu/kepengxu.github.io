@@ -38,6 +38,7 @@ My research team secured the fourth place in the objective quality category at t
 
 
 # 🔥 News
+- *2026.06*: Released the project page for **DeCoMix-HDR: Degradation-aware Contrastive Mining and Mixing for Generalized SDR-to-HDR Conversion**.
 - *2026.05*: Released the project page for **Allegory of the Cave: Measurement-Grounded Vision-Language Learning**.
 - *2026.03*: 🎉 1 paper **C^0 Generalized Coons Volumes over Arbitrary Polyhedra** accepted by **SIGGRAPH 2026**
 - *2025.11*: 📝 1 paper accepted by AAAI 2026 Oral 
@@ -60,7 +61,19 @@ My research team secured the fourth place in the objective quality category at t
 - *2023.01*: I join TikTok <img src='./images/tiktok.png' style='width: 6em;'> as a speech research scientist in Singapore!
 - *2022.02*: I release a modern and responsive academic personal [homepage template](https://github.com/RayeRen/acad-homepage.github.io). Welcome to STAR and FORK! -->
 
-# 📝 Publications 
+# 📝 Publications
+
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Manuscript</div><img src='images/decomixhdr.png' alt="DeCoMix-HDR" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[DeCoMix-HDR: Degradation-aware Contrastive Mining and Mixing for Generalized SDR-to-HDR Conversion](https://kepengxu.github.io/projects/decomixhdr/)
+
+**Kepeng Xu**, Jialin Wu, Siqi Wang, Li Xu, Chang Wu, Gang He, Wenxin Yu, Yunsong Li, Yu-Wing Tai
+
+[**Project**](https://kepengxu.github.io/projects/decomixhdr/) / [**GitHub**](https://github.com/kepengxu/RealRep) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+- DeCoMix-HDR learns attribute-disentangled degradation representations with luma-/chroma-aware contrastive mining and rank-guided representation mixing for robust SDR-to-HDR conversion.
+</div>
+</div>
 
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">SIGGRAPH 2026</div><img src='images\gcv.jpg' alt="gcvolume" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
