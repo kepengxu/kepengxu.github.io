@@ -68,7 +68,7 @@ My research team secured the fourth place in the objective quality category at t
 
 [DeCoMix-HDR: Degradation-aware Contrastive Mining and Mixing for Generalized SDR-to-HDR Conversion](https://kepengxu.github.io/projects/decomixhdr/)
 
-**Kepeng Xu**, Jialin Wu, Siqi Wang, Li Xu, Chang Wu, Gang He, Wenxin Yu, Yunsong Li, Yu-Wing Tai
+**Kepeng Xu**, Jialing Wu, Siqi Wang, Li Xu, Chang Wu, Gang He, Wenxin Yu, Yunsong Li, Yu-Wing Tai
 
 [**Project**](https://kepengxu.github.io/projects/decomixhdr/) / [**GitHub**](https://github.com/kepengxu/RealRep) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 - DeCoMix-HDR learns attribute-disentangled degradation representations with luma-/chroma-aware contrastive mining and rank-guided representation mixing for robust SDR-to-HDR conversion.
