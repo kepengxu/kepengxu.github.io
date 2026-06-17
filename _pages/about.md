@@ -70,6 +70,8 @@ My research team secured the fourth place in the objective quality category at t
 
 **Kepeng Xu**, Jialing Wu, Siqi Wang, Li Xu, Chang Wu, Gang He, Wenxin Yu, Yunsong Li, Yu-Wing Tai
 
+[![](https://img.shields.io/github/stars/kepengxu/RealRep?style=social&label=Code+Stars)](https://github.com/kepengxu/RealRep)
+
 [**Project**](https://kepengxu.github.io/projects/decomixhdr/) / [**GitHub**](https://github.com/kepengxu/RealRep) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 - DeCoMix-HDR learns attribute-disentangled degradation representations with luma-/chroma-aware contrastive mining and rank-guided representation mixing for robust SDR-to-HDR conversion.
 </div>
@@ -93,6 +95,8 @@ Kaikai Qin, Zeqi Ge, Péter Salvi, Chenhao Ying, Huibiao Wen, **Kepeng Xu**, Shi
 [Allegory of the Cave: Measurement-Grounded Vision-Language Learning](https://kepengxu.github.io/projects/prism-vl/)
 
 **Kepeng Xu**, Li Xu, Gang He, Wenxin Yu
+
+[![](https://img.shields.io/github/stars/kepengxu/PRISM-VL?style=social&label=Code+Stars)](https://github.com/kepengxu/PRISM-VL)
 
 [**Project**](https://kepengxu.github.io/projects/prism-vl/) / [**PDF**](https://kepengxu.github.io/projects/prism-vl/prism-vl.pdf) / [**GitHub**](https://github.com/kepengxu/PRISM-VL) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
 - PRISM-VL studies measurement-grounded VLM learning with RAW-derived Meas.-XYZ inputs, camera-conditioned grounding, and exposure-bracketed supervision transfer.
@@ -196,7 +200,9 @@ Wei Chen, Zhao Zhang, Meng Yuan, **Kepeng Xu**, Fuzhen Zhuang.
 
 [An End-to-End Real-World Camera Imaging Pipeline](https://arxiv.org/abs/2411.10773)
 
-**Kepeng Xu**, Zijia Ma, Li Xu et al.[![](https://img.shields.io/github/stars/kepengxu/RealCamNet?style=social&label=Code+Stars)](https://github.com/kepengxu/RealCamNet)
+**Kepeng Xu**, Zijia Ma, Li Xu et al.
+
+[![](https://img.shields.io/github/stars/kepengxu/RealCamNet?style=social&label=Code+Stars)](https://github.com/kepengxu/RealCamNet)
 
 
 [**Project**](https://kepengxu.github.io/projects/realcamnet/) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
@@ -212,7 +218,9 @@ Wei Chen, Zhao Zhang, Meng Yuan, **Kepeng Xu**, Fuzhen Zhuang.
 
 [Beyond Alignment: Blind Video Face Restoration via Parsing-Guided Temporal-Coherent Transformer](https://arxiv.org/abs/2404.13640)
 
-**Kepeng Xu**, Li Xu, Gang He et al.[![](https://img.shields.io/github/stars/kepengxu/PGTFormer?style=social&label=Code+Stars)](https://github.com/kepengxu/PGTFormer)
+**Kepeng Xu**, Li Xu, Gang He et al.
+
+[![](https://img.shields.io/github/stars/kepengxu/PGTFormer?style=social&label=Code+Stars)](https://github.com/kepengxu/PGTFormer)
 
 
 [**Project**](https://kepengxu.github.io/projects/pgtformer/) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
@@ -228,6 +236,7 @@ Wei Chen, Zhao Zhang, Meng Yuan, **Kepeng Xu**, Fuzhen Zhuang.
 
 [Awesome-SDRTV-to-HDRTV](https://github.com/kepengxu/Awesome-SDRTV-to-HDRTV-Video-nverse-Tone-Mapping/tree/main)
 
+[![](https://img.shields.io/github/stars/kepengxu/Awesome-SDRTV-to-HDRTV-Video-nverse-Tone-Mapping?style=social&label=Code+Stars)](https://github.com/kepengxu/Awesome-SDRTV-to-HDRTV-Video-nverse-Tone-Mapping)
 
 </div>
 </div>
@@ -239,6 +248,7 @@ Wei Chen, Zhao Zhang, Meng Yuan, **Kepeng Xu**, Fuzhen Zhuang.
 
 [Awesome-Video Face Restoration](https://github.com/kepengxu/Awesome-Video-Face-Restoration/tree/main)
 
+[![](https://img.shields.io/github/stars/kepengxu/Awesome-Video-Face-Restoration?style=social&label=Code+Stars)](https://github.com/kepengxu/Awesome-Video-Face-Restoration)
 
 </div>
 </div>
@@ -250,7 +260,9 @@ Wei Chen, Zhao Zhang, Meng Yuan, **Kepeng Xu**, Fuzhen Zhuang.
 
 [SDRTV-to-HDRTV via Hierarchical Dynamic Context Feature Mapping](https://arxiv.org/abs/2207.00319)
 
-Gang He, **Kepeng Xu***, Li Xu et al.[![](https://img.shields.io/github/stars/iii935/HDCFM?style=social&label=Code+Stars)](https://github.com/iii935/HDCFM)
+Gang He, **Kepeng Xu***, Li Xu et al.
+
+[![](https://img.shields.io/github/stars/iii935/HDCFM?style=social&label=Code+Stars)](https://github.com/iii935/HDCFM)
 
 
 
